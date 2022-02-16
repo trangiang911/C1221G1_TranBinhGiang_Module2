@@ -11,7 +11,7 @@ public class PTBacNhat {
         System.out.println("Enter c: ");
         float c=sc.nextFloat();
         if(a!=0){
-            Float x=(c-b)/a;
+            float x=(c-b)/a;
             System.out.println("Gia tri cua x: "+x);
         }
         else{
