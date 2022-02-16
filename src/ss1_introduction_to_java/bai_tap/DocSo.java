@@ -163,11 +163,36 @@ public class DocSo {
                 hangTram(arr[0]);
                 donVi(arr[2]);
                 hangChuc(arr[1]);
-
-            } else if (arr[1] != '1') {
+            } else if (arr[1] == '1' && arr[2] == '1') {
                 hangTram(arr[0]);
-                hangChuc(arr[1]);
-                donVi(arr[2]);
+                System.out.println("eleven");
+            } else if (arr[1] == '1' && arr[2] == '2') {
+                hangTram(arr[0]);
+                System.out.println("twelve");
+            } else if (arr[1] == '1' && arr[2] == '3') {
+                hangTram(arr[0]);
+                System.out.println("thirteen");
+            } else if (arr[1] == '1' && arr[2] == '5') {
+                hangTram(arr[0]);
+                System.out.println("fifteen");
+            } else if (arr[1] != '1') {
+                if (arr[1] == '1' && arr[2] == '1') {
+                    hangTram(arr[0]);
+                    System.out.println("eleven");
+                } else if (arr[1] == '1' && arr[2] == '2') {
+                    hangTram(arr[0]);
+                    System.out.println("twelve");
+                } else if (arr[1] == '1' && arr[2] == '3') {
+                    hangTram(arr[0]);
+                    System.out.println("thirteen");
+                } else if (arr[1] == '1' && arr[2] == '5') {
+                    hangTram(arr[0]);
+                    System.out.println("fifteen");
+                } else {
+                    hangTram(arr[0]);
+                    hangChuc(arr[1]);
+                    donVi(arr[2]);
+                }
             }
         }
     }
