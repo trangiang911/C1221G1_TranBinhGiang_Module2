@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ChuyenDoiTienTe",
+            "request": "launch",
+            "mainClass": "ss1_introduction_to_java.bai_tap.ChuyenDoiTienTe",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Launch DocSo",
             "request": "launch",
             "mainClass": "ss1_introduction_to_java.bai_tap.DocSo",
