@@ -19,11 +19,3 @@ f
 6src/ss1_introduction_to_java/thuc_hanh/DayOfMonth.java,f\1\f16490ec39feb738ac0fe9a015f3f89497955970
 _
 /src/ss1_introduction_to_java/bai_tap/DocSo.java,2\5\251190e55cede7fde4f535d6765a75c4939b47ca
-e
-5src/ss2_vong_lap_trong_java/thuc_hanh/SoNguyenTo.java,3\a\3a9fce20045eefd1bb04390ec4ea437d88a14de3
-b
-2src/ss2_vong_lap_trong_java/thuc_hanh/TienLai.java,b\1\b1c67167d2eaa28d5fcf7dd8776ee2b4e2f366d7
-j
-:src/ss2_vong_lap_trong_java/thuc_hanh/UocChungLonNhat.java,c\2\c223be60199fc9f8f5b2b19dd632f2024ddea96c
-i
-9src/ss2_vong_lap_trong_java/thuc_hanh/MenuChoUngDung.java,4\8\4817a130f1611cd12bcad47ab4e9b76b5d294743
