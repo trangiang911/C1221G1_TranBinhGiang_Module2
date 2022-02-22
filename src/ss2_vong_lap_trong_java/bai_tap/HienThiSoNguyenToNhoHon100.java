@@ -16,7 +16,7 @@ public class HienThiSoNguyenToNhoHon100 {
                     }
                 }
             }
-            if (flag == true) {
+            if (flag) {
                 System.out.print(n + " ");
             }
             n++;

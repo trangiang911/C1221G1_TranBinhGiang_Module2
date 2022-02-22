@@ -22,7 +22,7 @@ public class HienThi20SoNguyenToDauTien {
                     }
                 }
             }
-            if (flag == true) {
+            if (flag) {
                 count++;
                 System.out.print(n + " ");
             }

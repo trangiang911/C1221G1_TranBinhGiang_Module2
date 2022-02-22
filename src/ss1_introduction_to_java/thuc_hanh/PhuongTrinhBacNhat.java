@@ -1,7 +1,7 @@
 package ss1_introduction_to_java.thuc_hanh;
 
 import java.util.Scanner;
-public class PTBacNhat {
+public class PhuongTrinhBacNhat {
     public static void main(String[] args) throws Exception {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter a: ");

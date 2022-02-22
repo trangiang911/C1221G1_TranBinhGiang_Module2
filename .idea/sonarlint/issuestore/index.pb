@@ -1,8 +1,6 @@
 
 h
 8src/ss1_introduction_to_java/thuc_hanh/OpreratorExp.java,0\b\0bfb30a2001fb17b6932766c9ddc0fc953f426db
-e
-5src/ss1_introduction_to_java/thuc_hanh/PTBacNhat.java,3\0\306dca659f65592e393237397fd7ed19754168c5
 f
 6src/ss1_introduction_to_java/thuc_hanh/SystemTime.java,8\c\8c9d7fb092b0dcbfee9dea4f5cb7b2898df92e56
 l
@@ -23,14 +21,8 @@ j
 :src/ss2_vong_lap_trong_java/thuc_hanh/UocChungLonNhat.java,c\2\c223be60199fc9f8f5b2b19dd632f2024ddea96c
 i
 9src/ss2_vong_lap_trong_java/thuc_hanh/MenuChoUngDung.java,4\8\4817a130f1611cd12bcad47ab4e9b76b5d294743
-k
-;src/ss2_vong_lap_trong_java/bai_tap/HienThiCacLoaiHinh.java,d\6\d60825c74f2595e46d72a976e4454b8ad6fa26f4
-s
-Csrc/ss2_vong_lap_trong_java/bai_tap/HienThi20SoNguyenToDauTien.java,e\f\ef6aae1f1ceeab5da643cbf25b4d65e623383698
 e
 5src/ss2_vong_lap_trong_java/thuc_hanh/SoNguyenTo.java,3\a\3a9fce20045eefd1bb04390ec4ea437d88a14de3
-s
-Csrc/ss2_vong_lap_trong_java/bai_tap/HienThiSoNguyenToNhoHon100.java,6\2\623908aecfee535842015e9f546053c36be2d569
 x
 Hsrc/ss3_mang_va_phuong_thuc_trong_java/thuc_hanh/TimGiaTriTrongMang.java,e\f\ef3829d636d90e820d8d36acb35c8a0deced1730
 r
