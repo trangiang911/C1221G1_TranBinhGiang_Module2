@@ -1,7 +1,7 @@
 package ss4_lop_doi_tuong_trong_java.bai_tap.pt_bac_hai;
 
 public class PTBacHai {
-    double a, b, c;
+    private double a, b, c;
 
     public PTBacHai() {
     }
