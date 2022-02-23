@@ -37,8 +37,6 @@ Ssrc/ss3_mang_va_phuong_thuc_trong_java/bai_tap/TimGiaTriLonNhatTrongMang2Chieu.
 Nsrc/ss3_mang_va_phuong_thuc_trong_java/bai_tap/TongDuongCheoCuaMang2Chieu.java,b\4\b4c8f7a98e2ec17e8289c165608124d56b0493ae
 u
 Esrc/ss3_mang_va_phuong_thuc_trong_java/bai_tap/TinhTongCuaMotCot.java,e\f\ef54e71787372ff32d53df5f457681a3e2223101
-m
-=src/ss3_mang_va_phuong_thuc_trong_java/bai_tap/DemSoKyTu.java,8\3\830c7e81a3e351115f20d21929248a3e6fecfff9
 _
 /src/ss1_introduction_to_java/bai_tap/DocSo.java,2\5\251190e55cede7fde4f535d6765a75c4939b47ca
 v
@@ -73,3 +71,17 @@ jsrc/ss5_accessmodifier_static_method_static_property/bai_tap/xay_dung_lop_chi_g
 Xsrc/ss5_accessmodifier_static_method_static_property/bai_tap/access_modifier/Circle.java,3\c\3c0bc3f33647ef5d334e6f82acd3afa8c2b649e1
 Œ
 \src/ss5_accessmodifier_static_method_static_property/bai_tap/access_modifier/TestCircle.java,b\a\ba041ffbed426f448d5bea82eda6826775597229
+r
+Bsrc/ss6_ke_thua/thuc_hanh/he_cac_doi_tuong_hinh_hoc/TestShape.java,d\d\dd811288ef1cae3fdb3c501ee365abe5b0ba0397
+n
+>src/ss6_ke_thua/thuc_hanh/he_cac_doi_tuong_hinh_hoc/Shape.java,0\4\04f87e36a1ca0f27adaf8c8962a1ddbede2aba35
+s
+Csrc/ss6_ke_thua/thuc_hanh/he_cac_doi_tuong_hinh_hoc/TestCircle.java,7\d\7d5e714a13113c3ea54c28cdfc48a20471c460fc
+r
+Bsrc/ss6_ke_thua/thuc_hanh/he_cac_doi_tuong_hinh_hoc/Rectangle.java,e\9\e966deff6b9d5720fbdd3f47e66886532883af15
+v
+Fsrc/ss6_ke_thua/thuc_hanh/he_cac_doi_tuong_hinh_hoc/TestRectangle.java,6\a\6a1b6057ea202c90c0fce05a33b68bbb8568bdd9
+o
+?src/ss6_ke_thua/thuc_hanh/he_cac_doi_tuong_hinh_hoc/Square.java,0\d\0d7dbbb9a94868a3ff348bd06a0506b89284d222
+s
+Csrc/ss6_ke_thua/thuc_hanh/he_cac_doi_tuong_hinh_hoc/TestSquare.java,f\7\f724fbc85c7e2affb14f1dd55ea93f4b085bfd09
