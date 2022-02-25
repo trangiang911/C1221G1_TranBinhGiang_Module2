@@ -1,6 +1,6 @@
 package ss7_abstract_interface.bai_tap.colorable;
 
-public class Circle {
+public class Circle extends src_code.Circle {
     public Circle() {
     }
 

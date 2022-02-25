@@ -1,6 +1,8 @@
 package ss7_abstract_interface.bai_tap.colorable;
 
-public class Rectangle {
+import src_code.Circle;
+
+public class Rectangle extends src_code.Rectangle {
     public Rectangle() {
     }
 
