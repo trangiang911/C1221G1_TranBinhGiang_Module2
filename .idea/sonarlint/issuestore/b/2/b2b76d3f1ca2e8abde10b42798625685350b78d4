@@ -1,0 +1,21 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(é¸×È
+^
+java:S1172"CRemove these unused method parameters "player1Name", "player2Name".(Ò‰Ûüÿÿÿÿ
+D
+java:S1481".Remove this unused "tempScore" local variable.(¶¹Ğ¬
+<	java:S131""Add a default case to this switch.(¤’Ğ¯ıÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ŸÅ¨
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ŸÅ¨
+k	java:S117;"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á”òèùÿÿÿÿ
+7
+java:S1643"Use a StringBuilder instead.(öòûøÿÿÿÿ
+2
+java:S1643!"Use a StringBuilder instead.(¶°Õ
+2
+java:S1643$"Use a StringBuilder instead.(Ù£†
+2
+java:S1643'"Use a StringBuilder instead.(å»š 
+2
+java:S1643*"Use a StringBuilder instead.(÷¦¬ó

@@ -1,0 +1,15 @@
+
+U
+java:S3878"8Remove this array creation and simply pass the elements.(Ğş´ã8•§ïüò/
+M
+java:S5960Q"+Remove this assertion from production code.(®Ç¨•øÿÿÿÿ8Ù§ïüò/
+r
+java:S1192)"PDefine a constant instead of duplicating this literal "Win for player1" 5 times.(Ïê”¦üÿÿÿÿ8Ú§ïüò/
+r
+java:S1192*"PDefine a constant instead of duplicating this literal "Win for player2" 5 times.(¨¶¨“úÿÿÿÿ8Ú§ïüò/
+o
+java:S11928"RDefine a constant instead of duplicating this literal "Advantage player1" 3 times.(Æ©˜8Û§ïüò/
+t
+java:S11929"RDefine a constant instead of duplicating this literal "Advantage player2" 3 times.(ÓåÏÖùÿÿÿÿ8Û§ïüò/
+r	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙœõÑúÿÿÿÿ8Û§ïüò/
+r	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æàÜÿÿÿÿÿ8Ü§ïüò/

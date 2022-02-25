@@ -2,7 +2,5 @@
 L
 java:S1197
 "*Move the array designators [] to the type.(ëÕšÀúÿÿÿÿ8äÑ›ôò/
-R
-java:S4838"5Change "Shape" to the type handled by the Collection.(–ÙÀ£8äÑ›ôò/
 c
 java:S1192"FDefine a constant instead of duplicating this literal "area " 3 times.(éé½¾8èÑ›ôò/
