@@ -139,8 +139,6 @@ i
 9src/ss7_abstract_interface/bai_tap/reziseable/Square.java,5\7\5703c438f0a628c3e803b2fab4cf529d1a986bef
 ‹
 [src/ss7_abstract_interface/thuc_hanh/lop_animal_va_interface_edible/TestAnimalAndFruit.java,f\a\fa608b5b7603026000d04ecb1af5ccf5142a46c4
-m
-=src/ss7_abstract_interface/bai_tap/reziseable/Resizeable.java,8\e\8ee03416e8f260252a542030ba99c150a1d99e38
 i
 9src/ss7_abstract_interface/bai_tap/reziseable/Circle.java,b\1\b18b3f29f0bf14928e8df9706ccc6de4a51d32af
 k
@@ -175,3 +173,9 @@ j
 :src/ss8_clean_code_refactoring/bai_tap/TennisGameTest.java,9\d\9de1498be2805982cff3ad33e5a2473b5cfed0aa
 f
 6src/ss8_clean_code_refactoring/bai_tap/TennisGame.java,b\2\b2b76d3f1ca2e8abde10b42798625685350b78d4
+j
+:src/bai_tap_lam_them_1/xuat_nhap_thong_tin_xe/Vehicle.java,0\5\059db8725c163ec28d11e4c0e993fb8271ba9a16
+n
+>src/bai_tap_lam_them_1/xuat_nhap_thong_tin_xe/VehicleTest.java,e\6\e64678fbcf0d689fe2ba89f68f8d058c5de442df
+m
+=src/ss7_abstract_interface/bai_tap/reziseable/Resizeable.java,8\e\8ee03416e8f260252a542030ba99c150a1d99e38
