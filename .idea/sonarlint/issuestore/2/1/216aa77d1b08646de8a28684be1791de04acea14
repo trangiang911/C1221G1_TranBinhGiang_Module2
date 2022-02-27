@@ -1,0 +1,11 @@
+
+Z
+java:S1854
+"8Remove this useless assignment to local variable "car2".(‰Τ€¦ϋÿÿÿÿ8ΓΩ‹κρ/
+Z
+java:S1854"8Remove this useless assignment to local variable "car1".(ÿε©ÿÿÿÿÿ8ΔΩ‹κρ/
+K
+java:S1481")Remove this unused "car1" local variable.(ÿε©ÿÿÿÿÿ8ΙΩ‹κρ/
+K
+java:S1481
+")Remove this unused "car2" local variable.(‰Τ€¦ϋÿÿÿÿ8ΛΩ‹κρ/
