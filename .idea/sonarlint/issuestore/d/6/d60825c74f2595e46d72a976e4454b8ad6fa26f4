@@ -1,4 +1,22 @@
 
 h
 java:S3776"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(Çµí‘
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ýÉ£Ô8²÷¼ûó/
+Z	java:S106	"9Replace this use of System.out or System.err by a logger.(Šü¨Åúÿÿÿÿ8´÷¼ûó/
 <	java:S131""Add a default case to this switch.(Œ¼’ þÿÿÿÿ
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‹µ‹¶ýÿÿÿÿ8¼÷¼ûó/
+T	java:S106"9Replace this use of System.out or System.err by a logger.(°•Þ8½÷¼ûó/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‹µ‹¶ýÿÿÿÿ8¾÷¼ûó/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ8¿÷¼ûó/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‹µ‹¶ýÿÿÿÿ8¿÷¼ûó/
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ8¿÷¼ûó/
+U	java:S106'"9Replace this use of System.out or System.err by a logger.(×•œ²8À÷¼ûó/
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(‹µ‹¶ýÿÿÿÿ8À÷¼ûó/
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(ÞžÒ—üÿÿÿÿ8À÷¼ûó/
+U	java:S1062"9Replace this use of System.out or System.err by a logger.(×•œ²8À÷¼ûó/
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(‹µ‹¶ýÿÿÿÿ8À÷¼ûó/
+T	java:S1067"9Replace this use of System.out or System.err by a logger.(°•Þ8Á÷¼ûó/
+U	java:S106="9Replace this use of System.out or System.err by a logger.(×•œ²8Ã÷¼ûó/
+Z	java:S106@"9Replace this use of System.out or System.err by a logger.(‹µ‹¶ýÿÿÿÿ8Ã÷¼ûó/
+T	java:S106B"9Replace this use of System.out or System.err by a logger.(°•Þ8Ä÷¼ûó/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(žËž–8Ä÷¼ûó/

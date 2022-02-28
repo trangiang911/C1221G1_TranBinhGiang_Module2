@@ -1,0 +1,10 @@
+
+T
+java:S5993"9Change the visibility of this constructor to "protected".(ôºã—ýÿÿÿÿ
+T
+java:S5993"9Change the visibility of this constructor to "protected".(¼·Ž”øÿÿÿÿ
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(è…æé
+N	java:S106B"9Replace this use of System.out or System.err by a logger.(–¨°‡
+D
+java:S1068")Remove this unused "soCho" private field.(ö¢œ×úÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®›œ°

@@ -1,0 +1,8 @@
+
+G
+java:S1197"*Move the array designators [] to the type.(ôÁÍÆ8ãí˜ýó/
+u
+java:S2975_"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(±ÌÍÐúÿÿÿÿ8žî˜ýó/
+j
+java:S1182_"HUse super.clone() to create and seed the cloned instance to be returned.(±ÌÍÐúÿÿÿÿ8Ÿî˜ýó/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´ÜÑÒ8ä×™ýó/

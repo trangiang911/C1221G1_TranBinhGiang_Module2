@@ -1,0 +1,10 @@
+
+g	java:S116"RRename this field "LAISUAT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼´Ÿ…
+7
+java:S1170"!Make this final field static too.(¼´Ÿ…
+S	java:S106."9Replace this use of System.out or System.err by a logger.(Š»¸úÿÿÿÿ
+2
+java:S11161"Remove this empty statement.(èÃ³¯
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(—¤á
+N	java:S106A"9Replace this use of System.out or System.err by a logger.(ã—âŠ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼¡¶
