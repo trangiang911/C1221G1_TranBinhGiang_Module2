@@ -1,12 +1,8 @@
 package bai_tap_lam_them_1.chuong_trinh_quan_ly_phuong_tien;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public abstract class Xe {
     private String bienKiemSoat;
-    private String hangXe;
+    private String hangXe=HangXe.chonHangXe1();
     private int namSanXuat;
     private String chuSoHuu;
     private int soCho;
@@ -20,6 +16,19 @@ public abstract class Xe {
         this.namSanXuat = namSanXuat;
         this.chuSoHuu = chuSoHuu;
 
+    }
+
+    public Xe(String bienKiemSoat, int namSanXuat, String chuSoHuu, int soCho) {
+        this.bienKiemSoat = bienKiemSoat;
+        this.namSanXuat = namSanXuat;
+        this.chuSoHuu = chuSoHuu;
+        this.soCho = soCho;
+    }
+
+    public Xe(String bienKiemSoat, int namSanXuat, String chuSoHuu) {
+        this.bienKiemSoat = bienKiemSoat;
+        this.namSanXuat = namSanXuat;
+        this.chuSoHuu = chuSoHuu;
     }
 
     public String getBienKiemSoat() {
@@ -54,37 +63,22 @@ public abstract class Xe {
         this.chuSoHuu = chuSoHuu;
     }
 
-    public String chonHangXe() {
-        Scanner scanner = new Scanner(System.in);
-        List<String> list = new ArrayList<>();
-        list.add("Honda");
-        list.add("hyundai");
-        list.add("hitachi");
-        System.out.println("1.Honda\n" +
-                "2.hyundai\n" +
-                "3.hitachi\n");
-        System.out.println("Nhập lựa chọn");
-        int choice = Integer.parseInt(scanner.nextLine());
-        switch (choice) {
-            case 1:
-                return "Honda";
-            case 2:
-                return "huyndai";
-            case 3:
-                return "hitachi";
-            default:
-                return "Không có lựa chọn";
+    public int getSoCho() {
+        return soCho;
+    }
 
-        }
+    public void setSoCho(int soCho) {
+        this.soCho = soCho;
     }
 
     @Override
     public String toString() {
-        return "Xe{" +
+        return
                 "bienKiemSoat='" + bienKiemSoat + '\'' +
                 ", hangXe='" + hangXe + '\'' +
                 ", namSanXuat=" + namSanXuat +
-                ", chuSoHuu='" + chuSoHuu + '\'' +
-                '}';
+                ", chuSoHuu='" + chuSoHuu + '\''
+                ;
     }
+
 }

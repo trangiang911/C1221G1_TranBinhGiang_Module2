@@ -9,6 +9,24 @@ public class Oto extends Xe {
         this.soCho=soCho;
     }
 
+    public Oto(String kieuXe, int soCho) {
+        this.kieuXe = kieuXe;
+        this.soCho = soCho;
+    }
+
+
+    public Oto(String bienKiemSoat, int namSanXuat, String chuSoHuu, int soCho, String kieuXe, int soCho1) {
+        super(bienKiemSoat, namSanXuat, chuSoHuu, soCho);
+        this.kieuXe = kieuXe;
+        this.soCho = soCho1;
+    }
+
+    public Oto(String bienKiemSoat, int namSanXuat, String chuSoHuu, String kieuXe, int soCho) {
+        super(bienKiemSoat, namSanXuat, chuSoHuu);
+        this.kieuXe = kieuXe;
+        this.soCho = soCho;
+    }
+
     public Oto() {
         super();
     }
@@ -25,6 +43,7 @@ public class Oto extends Xe {
     public String toString() {
         return "Oto{" +super.toString()+
                 "kieuXe='" + kieuXe + '\'' +
+                " SoCho='" + soCho+ '\n'+
                 '}';
     }
 }

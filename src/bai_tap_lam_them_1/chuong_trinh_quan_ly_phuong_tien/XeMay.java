@@ -9,6 +9,16 @@ public class XeMay extends Xe {
         this.congSuat = congSuat;
     }
 
+    public XeMay(String bienKiemSoat, int namSanXuat, String chuSoHuu, int soCho, double congSuat) {
+        super(bienKiemSoat, namSanXuat, chuSoHuu, soCho);
+        this.congSuat = congSuat;
+    }
+
+    public XeMay(String bienKiemSoat, int namSanXuat, String chuSoHuu, double congSuat) {
+        super(bienKiemSoat, namSanXuat, chuSoHuu);
+        this.congSuat = congSuat;
+    }
+
     public XeMay(double congSuat) {
         this.congSuat = congSuat;
     }

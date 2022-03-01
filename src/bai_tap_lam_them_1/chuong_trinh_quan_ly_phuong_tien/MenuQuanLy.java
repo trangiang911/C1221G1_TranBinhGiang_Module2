@@ -31,21 +31,17 @@ public class MenuQuanLy {
                         case 1:
                             System.out.println("Nhập biển kiểm soát");
                             String bienKS = scanner.nextLine();
-                            System.out.println("Nhập hãng xe");
-                            String hangXe = scanner.nextLine();
                             System.out.println("Nhập năm sản xuất");
                             int namSX = Integer.parseInt(scanner.nextLine());
                             System.out.println("Chủ phương tiện");
                             String name = scanner.nextLine();
                             System.out.println("Nhập trọng tải xe");
                             double trongTai = Double.parseDouble(scanner.nextLine());
-                            list1.add(new XeTai(bienKS, hangXe, namSX, name, trongTai));
+                            list1.add(new XeTai(bienKS, namSX, name, trongTai));
                             break;
                         case 2:
                             System.out.println("Nhập biển kiểm soát");
                             String bienKSOTO = scanner.nextLine();
-                            System.out.println("Nhập hãng xe");
-                            String hangXeOTO = scanner.nextLine();
                             System.out.println("Nhập năm sản xuất");
                             int namSXOTO = Integer.parseInt(scanner.nextLine());
                             System.out.println("Chủ phương tiện");
@@ -54,20 +50,18 @@ public class MenuQuanLy {
                             int soChoOTO = Integer.parseInt(scanner.nextLine());
                             System.out.println("Nhập Kiểu xe ô tô");
                             String kieuOTO = scanner.nextLine();
-                            list.add(new Oto(bienKSOTO, hangXeOTO, namSXOTO, nameOTO, soChoOTO, kieuOTO));
+                            list.add(new Oto(bienKSOTO, namSXOTO, nameOTO, kieuOTO, soChoOTO));
                             break;
                         case 3:
                             System.out.println("Nhập biển kiểm soát");
                             String bienKSXeMay = scanner.nextLine();
-                            System.out.println("Nhập hãng xe");
-                            String hangXeMay = scanner.nextLine();
                             System.out.println("Nhập năm sản xuất");
                             int namSXXeMay = Integer.parseInt(scanner.nextLine());
                             System.out.println("Chủ phương tiện");
                             String nameXeMay = scanner.nextLine();
                             System.out.println("Nhập công suất xe máy");
                             double congSuatXeMay = Double.parseDouble(scanner.nextLine());
-                            list2.add(new XeMay(bienKSXeMay, hangXeMay, namSXXeMay, nameXeMay, congSuatXeMay));
+                            list2.add(new XeMay(bienKSXeMay, namSXXeMay, nameXeMay, congSuatXeMay));
                             break;
                         default:
                             System.out.println("Lựa chọn sai");
@@ -102,26 +96,58 @@ public class MenuQuanLy {
                     }
                     break;
                 case 3:
+                    int cont = 0;
                     System.out.println("Nhập biển số xe tải cần xoá");
                     String bienSoXeXoa = scanner.nextLine();
                     for (int i = 0; i < list.size(); i++) {
                         if (bienSoXeXoa.equals(list.get(i).getBienKiemSoat())) {
-                            list.remove(i);
-                            break;
+                            System.out.println("Muốn xoá chắc chưa (yes or no)");
+                            String xacNhan = scanner.nextLine();
+                            if (xacNhan.equals("yes")) {
+                                list.remove(i);
+                                System.out.println("Xoá thành công\n");
+                                cont++;
+                                break;
+                            } else {
+                                System.out.println("Vậy là ko xoá");
+                            }
                         }
                     }
                     for (int j = 0; j < list1.size(); j++) {
                         if (bienSoXeXoa.equals(list1.get(j).getBienKiemSoat())) {
-                            list1.remove(j);
-                            break;
+                            System.out.println("Muốn xoá chắc chưa (yes or no)");
+                            String xacNhan = scanner.nextLine();
+                            if (xacNhan.equals("yes")) {
+                                list1.remove(j);
+                                System.out.println("Xoá thành công\n");
+                                cont++;
+                                break;
+                            } else {
+                                System.out.println("Vậy là ko xoá");
+                            }
                         }
                     }
                     for (int k = 0; k < list2.size(); k++) {
                         if (bienSoXeXoa.equals(list2.get(k).getBienKiemSoat())) {
-                            list2.remove(k);
-                            break;
+                            System.out.println("Muốn xoá chắc chưa (yes or no)");
+                            String xacNhan = scanner.nextLine();
+                            if (xacNhan.equals("yes")) {
+                                list2.remove(k);
+                                System.out.println("Xoá thành công\n");
+                                cont++;
+                                break;
+                            } else {
+                                System.out.println("Vậy là ko xoá");
+                            }
                         }
                     }
+                    if (cont == 0) {
+                        System.out.println("Ko có xe cần xoá");
+                        System.out.println("");
+                    }
+                    break;
+                default:
+                    flag = false;
             }
 
         } while (flag);
