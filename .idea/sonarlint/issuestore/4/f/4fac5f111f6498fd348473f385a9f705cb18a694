@@ -1,0 +1,9 @@
+
+Q
+java:S3740
+"/Provide the parametrized type for this generic.(ŞËŞÿüÿÿÿÿ8ùĞ‘ô/
+^
+java:S1126"AReplace this if-then-else statement by a single return statement.(ËÁü8©š‘ô/
+[
+java:S1155">Use isEmpty() to check whether the collection is empty or not.(ËÁü8Ñ‘ô/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›à‡×

@@ -1,0 +1,12 @@
+
+Z	java:S106
+"9Replace this use of System.out or System.err by a logger.(ÿîãÚûÿÿÿÿ8§©Ö£ô/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(«İ½÷şÿÿÿÿ8¨©Ö£ô/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ù£·êıÿÿÿÿ8­©Ö£ô/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(«©ßà8­©Ö£ô/
+T	java:S106"9Replace this use of System.out or System.err by a logger.(Úòæ8®©Ö£ô/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ïÍØƒ8°©Ö£ô/
+o
+java:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ú§Ëì
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(¿àÇúÿÿÿÿ8±©Ö£ô/
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–}8´©Ö£ô/

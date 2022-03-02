@@ -1,0 +1,11 @@
+
+T	java:S106"9Replace this use of System.out or System.err by a logger.(―†ÿ[8υσωΣτ/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Θ²φθωÿÿÿÿ8υσωΣτ/
+T	java:S106 "9Replace this use of System.out or System.err by a logger.(―†ÿ[8υσωΣτ/
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(όΪωγÿÿÿÿÿ8«‰ϋΣτ/
+v
+java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(‡΄ρ―ωÿÿÿÿ8«‰ϋΣτ/
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰η“ωψÿÿÿÿ8υσωΣτ/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(οΈΘ8«‰ϋΣτ/

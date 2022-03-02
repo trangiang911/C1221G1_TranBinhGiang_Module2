@@ -1,0 +1,16 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ú¡÷Êıÿÿÿÿ8ª­”ô/
+B
+java:S3457"%String contains no format specifiers.(›ğ’õ8®­”ô/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(›ğ’õ8®­”ô/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¦ğ¨Ø8¯­”ô/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ô°Ñ³úÿÿÿÿ8°­”ô/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÔŸˆİüÿÿÿÿ8²­”ô/
+B
+java:S3457"%String contains no format specifiers.(÷ƒ”´8³­”ô/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(÷ƒ”´8³­”ô/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(âÏ„«8´­”ô/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(Èã8µ­”ô/
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(‘ê·¢ÿÿÿÿÿ8¶­”ô/
+U	java:S106%"9Replace this use of System.out or System.err by a logger.(‡àé†8·­”ô/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›à‡×
