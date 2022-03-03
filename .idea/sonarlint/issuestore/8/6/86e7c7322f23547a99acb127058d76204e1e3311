@@ -1,16 +1,0 @@
-
-S	java:S106"9Replace this use of System.out or System.err by a logger.(¤“Æ°ıÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(úÀ°ë
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ë–îÃûÿÿÿÿ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ŠÿÃŸùÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(Àö˜Ÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(õ³Õ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(àãÿ”
-N	java:S106"9Replace this use of System.out or System.err by a logger.(ôŒ‰
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ïƒ™Éşÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(‰ÃŒ
-S	java:S106!"9Replace this use of System.out or System.err by a logger.(¨å»–ıÿÿÿÿ
-N	java:S106%"9Replace this use of System.out or System.err by a logger.(ÅÖÿ·
-Z	java:S106)"9Replace this use of System.out or System.err by a logger.(äÌÜ¨øÿÿÿÿ8”Ó¥Õô/
-U	java:S106/"9Replace this use of System.out or System.err by a logger.(É²öâ8õ¢¦Õô/
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Æúá¬

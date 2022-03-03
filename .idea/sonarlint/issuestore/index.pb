@@ -213,8 +213,6 @@ p
 @src/bai_tap_lam_them_1/chuong_trinh_quan_ly_phuong_tien/Oto.java,5\f\5f320e5b7b8f4b3717c3d18f644cd662cdb8e484
 r
 Bsrc/bai_tap_lam_them_1/chuong_trinh_quan_ly_phuong_tien/XeTai.java,d\4\d41d1f4d750c470b520f64fbb745f614e1a840ee
-s
-Csrc/bai_tap_lam_them_1/chuong_trinh_quan_ly_phuong_tien/HangXe.java,8\e\8edfb5521c443fa63b3c0a0897340a729a79099b
 r
 Bsrc/bai_tap_lam_them_1/chuong_trinh_quan_ly_phuong_tien/XeMay.java,6\9\69d110f71cfb8083e83daeb98abb76b89317b4e5
 Ñ
@@ -227,10 +225,6 @@ Jsrc/ss12_java_frame_worl/thuc_hanh/phan_biet_hashmap_va_hash_set/Main.java,7\d
 Tsrc/ss12_java_frame_worl/thuc_hanh/sap_xep_voi_comparable_va_comparator/Student.java,2\4\24720239e56755b55ce27deca8309e19787f980c
 Å
 Qsrc/ss12_java_frame_worl/thuc_hanh/sap_xep_voi_comparable_va_comparator/Main.java,3\9\3934db987b4f93b86e17d27025efc209446c699c
-o
-?src/bai_tap_lam_them_1/chuong_trinh_quan_ly_phuong_tien/Xe.java,8\8\8813edbd440ed2f16f840b36a0e265299b8a182f
-Ñ
-Tsrc/ss12_java_frame_worl/bai_tap/luyen_tap_su_dung_arraylist_linkedlist/Product.java,a\2\a252e560b21abfde3feea9f936f4d54f7cf6b0b0
 w
 Gsrc/bai_tap_lam_them_1/chuong_trinh_quan_ly_phuong_tien/MenuQuanLy.java,1\e\1e9b6a323b5ae3204baac30e0033729ef854c0ca
 ä
@@ -239,9 +233,5 @@ Zsrc/ss12_java_frame_worl/thuc_hanh/sap_xep_voi_comparable_va_comparator/AgeComp
 \src/ss12_java_frame_worl/bai_tap/luyen_tap_su_dung_arraylist_linkedlist/sap_xep/TangDan.java,f\b\fb141f1544ef68c02cb872e9be5aa39da1bc989c
 å
 \src/ss12_java_frame_worl/bai_tap/luyen_tap_su_dung_arraylist_linkedlist/sap_xep/GiamDan.java,8\3\83c440836a0b6a1a277609413dafe0fe13d7848c
-ã
-[src/ss12_java_frame_worl/bai_tap/luyen_tap_su_dung_arraylist_linkedlist/ProductManager.java,6\2\62b210882957485b9c280cdd8e571e095d8fc82c
-Å
-Qsrc/ss12_java_frame_worl/bai_tap/luyen_tap_su_dung_arraylist_linkedlist/Test.java,8\6\86e7c7322f23547a99acb127058d76204e1e3311
 b
 2src/ss11_stack_queue/bai_tap/DemPhanTuBangMap.java,c\c\cc1eebc4387c0dbe9d6fce8a2d4ecf5224d7fefe
