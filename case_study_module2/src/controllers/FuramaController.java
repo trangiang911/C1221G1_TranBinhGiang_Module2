@@ -9,19 +9,19 @@ public class FuramaController {
         System.out.println("Main Menu");
         int choice = -1;
         do {
-            System.out.println("1.Employee Management\n"+
-                    "2.Customer Management\n"+
-                    "3.Facility Management\n"+
-                    "4.Booking Management\n"+
-                    "5.Promotion Management\n"+
-                    "6.Exit");
+            System.out.println("1.\tEmployee Management\n"+
+                    "2.\tCustomer Management\n"+
+                    "3.\tFacility Management\n"+
+                    "4.\tBooking Management\n"+
+                    "5.\tPromotion Management\n"+
+                    "6.\tExit");
             choice=Integer.parseInt(scanner.nextLine());
             switch (choice){
                 case 1:
-                    System.out.println("1\tDisplay list employees\n" +
-                            "2\tAdd new employee\n" +
-                            "3\tEdit employee\n" +
-                            "4\tReturn main menu\n");
+                    System.out.println("1.\tDisplay list employees\n" +
+                            "2.\tAdd new employee\n" +
+                            "3.\tEdit employee\n" +
+                            "4.\tReturn main menu\n");
                     break;
                 case 2:
                     System.out.println("1.\tDisplay list customers\n" +

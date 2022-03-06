@@ -1,0 +1,21 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(÷–¯Äûÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÁÔØ¦
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ã¸åöüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¬ĞË‹ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ë—¸ıÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(–üüıÿÿÿÿ
+N	java:S106""9Replace this use of System.out or System.err by a logger.(êÊéÙ
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(™óâ»
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(ÑÊÓ”üÿÿÿÿ
+?
+java:S54130")Verify that "remove()" is used correctly.(õÿ´Ğ
+N	java:S1061"9Replace this use of System.out or System.err by a logger.(ÙØĞæ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(Ö¸¬áşÿÿÿÿ
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(¹Ø–£
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(ƒğšûÿÿÿÿ
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(Íõ–¿ûÿÿÿÿ
+S	java:S106I"9Replace this use of System.out or System.err by a logger.(Øá¹©øÿÿÿÿ
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(ƒ¹ñá
+S	java:S106L"9Replace this use of System.out or System.err by a logger.(Øá¹©øÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Æúá¬

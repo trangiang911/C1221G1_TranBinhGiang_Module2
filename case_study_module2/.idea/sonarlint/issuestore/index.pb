@@ -5,8 +5,6 @@ G
 src/models/Booking.java,a\3\a3c6f397d1603786a9a737c3189703e4f5c21105
 H
 src/models/Customer.java,9\e\9e3a483584b4ef41fd4e403492cec9210b794ea1
-I
-src/services/Service.java,9\b\9bb96753b3ead0ade5548807a82d4fe717e8e060
 H
 src/models/Employee.java,b\4\b44f9b642b35b1b6d279b9ba85c5773af2dffbae
 E
@@ -19,3 +17,7 @@ E
 src/models/House.java,8\8\88dd453239c44e81f318051cfd49fbcd5ee8d631
 F
 src/models/Person.java,b\8\b85fdff8190b8b3f077e67e3056fe1dcf4d137ce
+U
+%src/controllers/FuramaController.java,8\f\8fe4bf4ba76d98aab979b6f04b70c1cc3ecea11a
+\
+,src/services/interface_service/IService.java,4\0\4013c65e9112e75f1e3820c30b6fc5da4ed909ab

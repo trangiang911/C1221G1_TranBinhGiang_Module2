@@ -35,6 +35,7 @@ public class ProductManager {
                 double moneyEdit=Double.parseDouble(scanner.nextLine());
                 productList.get(i).setMoney(moneyEdit);
                 System.out.println("Chỉnh sửa thành công");
+                break;
             }
         }
     }
