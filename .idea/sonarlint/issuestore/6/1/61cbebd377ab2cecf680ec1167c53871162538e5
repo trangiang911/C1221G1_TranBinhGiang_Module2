@@ -1,0 +1,7 @@
+
+A
+java:S1659"Declare "x" on a separate line.(Š§›Óùÿÿÿÿ8ÖŠ”›ö/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(à†Ü†8İŠ”›ö/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ê¹øÿÿÿÿ8àŠ”›ö/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(×Æáî8ãŠ”›ö/
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(í»ßıÿÿÿÿ

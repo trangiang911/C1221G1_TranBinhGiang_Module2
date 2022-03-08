@@ -8,6 +8,7 @@ import collection_review.models.Intern;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class CandidateManager {
     Scanner scanner = new Scanner(System.in);
@@ -41,12 +42,12 @@ public class CandidateManager {
                 String addres=scanner.nextLine();
                 System.out.println("Nhập số điện thoại ứng viên");
                 String phone=scanner.nextLine();
-                while (phone.length()!=10 ){
+                while (phone.length()!=10 || !Pattern.matches("\\d*",phone)){
                     System.out.println("Số điện thoại không hợp lệ, mời nhập lại");
                     phone = scanner.nextLine();
                 }
                 String type="Experience";
-                System.out.println("Nhập kinh nghiệm của ứng viên");
+                System.out.println("Nhập kinh nghiệm của ứng viên (0-100)");
                 int exp=Integer.parseInt(scanner.nextLine());
                 while (exp<0 || exp>100){
                     System.out.println("Kinh nghiệm ứng viên k hợp lệ, mời nhập lại");
@@ -166,7 +167,7 @@ public class CandidateManager {
         System.out.println("Nhập dấu hiệu tìm kiếm ứng viên");
         String nameFind=scanner.nextLine();
         for (int i=0;i<candidateList.size();i++){
-            if(candidateList.get(i).getName().contains(nameFind)){
+            if(candidateList.get(i).getName().toLowerCase().contains(nameFind)){
                 System.out.println(candidateList.get(i));
                 cont++;
             }
