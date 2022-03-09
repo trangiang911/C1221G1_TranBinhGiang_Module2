@@ -1,0 +1,6 @@
+
+@
+java:S2119"Save and re-use this "Random".(®ø»›şÿÿÿÿ8ÒíìÃö/
+Z	java:S106	"9Replace this use of System.out or System.err by a logger.(ÿ‹åÿÿÿÿÿ8ÇìÃö/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(º¼É°8“ÇìÃö/
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°äĞ
