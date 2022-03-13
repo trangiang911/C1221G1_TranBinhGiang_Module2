@@ -1,0 +1,6 @@
+
+s
+java:S1450"VRemove the "matcher" field and declare it as a local variable in the relevant methods.(¥½³Ú8ÏŒà¿÷/
+A
+java:S3010"$Remove this assignment of "pattern".(ÎÌ³8šà¿÷/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(©¶›Ö

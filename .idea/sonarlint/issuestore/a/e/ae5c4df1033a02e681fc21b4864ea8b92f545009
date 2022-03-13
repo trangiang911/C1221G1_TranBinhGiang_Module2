@@ -1,0 +1,7 @@
+
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+t
+java:S3012&"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(ô«Å²ýÿÿÿÿ
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(ÆÀûý
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼ˆ½âüÿÿÿÿ
