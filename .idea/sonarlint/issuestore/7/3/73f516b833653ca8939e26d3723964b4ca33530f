@@ -1,8 +1,0 @@
-
-k	java:S116"QRename this field "NuocSX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ó™øÿÿÿÿ
-S	java:S106A"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
-N	java:S106B"9Replace this use of System.out or System.err by a logger.(úûÛş
-S	java:S106C"9Replace this use of System.out or System.err by a logger.(Å«ã—ÿÿÿÿÿ
-S	java:S106J"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
-S	java:S106K"9Replace this use of System.out or System.err by a logger.(°ÏÌøÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü©İ­üÿÿÿÿ

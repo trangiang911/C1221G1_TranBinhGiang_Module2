@@ -1,7 +1,0 @@
-
-N	java:S106"9Replace this use of System.out or System.err by a logger.(íÕÄ
-S	java:S106"9Replace this use of System.out or System.err by a logger.(Ö¬ “ûÿÿÿÿ
-f	java:S128,"LEnd this switch case with an unconditional break, return or throw statement.(µ»ïşıÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(Öü‡
-S	java:S106/"9Replace this use of System.out or System.err by a logger.(ƒšŸ‡şÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸Ö˜ôüÿÿÿÿ
