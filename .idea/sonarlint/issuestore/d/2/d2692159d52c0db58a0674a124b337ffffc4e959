@@ -1,0 +1,72 @@
+
+m
+java:S3776+"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Õê™¡şÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(µîÓ‡ıÿÿÿÿ
+M	java:S1060"9Replace this use of System.out or System.err by a logger.(ÕËÉ
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(¸ÑçÏ
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(Ø±¸™ùÿÿÿÿ
+S	java:S106;"9Replace this use of System.out or System.err by a logger.(ÆİÊ§ÿÿÿÿÿ
+N	java:S106>"9Replace this use of System.out or System.err by a logger.(±Å××
+S	java:S106@"9Replace this use of System.out or System.err by a logger.(¾Õò§ÿÿÿÿÿ
+M	java:S106B"9Replace this use of System.out or System.err by a logger.(Ñ†Ğ-
+S	java:S106I"9Replace this use of System.out or System.err by a logger.(‘œ“Îüÿÿÿÿ
+N	java:S106K"9Replace this use of System.out or System.err by a logger.(¸ÑçÏ
+S	java:S106O"9Replace this use of System.out or System.err by a logger.(Ø±¸™ùÿÿÿÿ
+S	java:S106T"9Replace this use of System.out or System.err by a logger.(Ø±¸™ùÿÿÿÿ
+S	java:S106Y"9Replace this use of System.out or System.err by a logger.(ÆİÊ§ÿÿÿÿÿ
+N	java:S106\"9Replace this use of System.out or System.err by a logger.(±Å××
+S	java:S106^"9Replace this use of System.out or System.err by a logger.(¾Õò§ÿÿÿÿÿ
+S	java:S106`"9Replace this use of System.out or System.err by a logger.(‹’¯˜úÿÿÿÿ
+N	java:S106g"9Replace this use of System.out or System.err by a logger.(¸ÑçÏ
+S	java:S106j"9Replace this use of System.out or System.err by a logger.(Ø±¸™ùÿÿÿÿ
+S	java:S106n"9Replace this use of System.out or System.err by a logger.(ÆİÊ§ÿÿÿÿÿ
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(±Å××
+S	java:S106s"9Replace this use of System.out or System.err by a logger.(¾Õò§ÿÿÿÿÿ
+M	java:S106u"9Replace this use of System.out or System.err by a logger.(ÍòÉ
+S	java:S106~"9Replace this use of System.out or System.err by a logger.(“ÈÌåıÿÿÿÿ
+T	java:S106„"9Replace this use of System.out or System.err by a logger.(âûŞÕûÿÿÿÿ
+T	java:S106Œ"9Replace this use of System.out or System.err by a logger.(¬ĞË‹ùÿÿÿÿ
+O	java:S106‘"9Replace this use of System.out or System.err by a logger.(üÔÑÚ
+T	java:S106–"9Replace this use of System.out or System.err by a logger.(¬ĞË‹ùÿÿÿÿ
+O	java:S106œ"9Replace this use of System.out or System.err by a logger.(ŒëõÊ
+i
+java:S3776¡"RRefactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.(È¸å•
+W	java:S125¢"<This block of commented-out lines of code should be removed.(Æ¦ãÉùÿÿÿÿ
+O	java:S106¦"9Replace this use of System.out or System.err by a logger.(Ğò¥’
+
+java:S1157¨"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(•üÙöşÿÿÿÿ
+T	java:S106ª"9Replace this use of System.out or System.err by a logger.(®¢¦ışÿÿÿÿ
+O	java:S106º"9Replace this use of System.out or System.err by a logger.(Ğò¥’
+
+java:S1157¼"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ë‡¬İüÿÿÿÿ
+T	java:S106¾"9Replace this use of System.out or System.err by a logger.(®¢¦ışÿÿÿÿ
+T	java:S106Î"9Replace this use of System.out or System.err by a logger.(ğäÜôûÿÿÿÿ
+
+java:S1157Ğ"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ë‡¬İüÿÿÿÿ
+T	java:S106Ò"9Replace this use of System.out or System.err by a logger.(®¢¦ışÿÿÿÿ
+m
+java:S1128"RRemove this unused import 'ss16_io_text_file.bai_tap.copy_file_text.ReadAndWrite'.(»®±Ùúÿÿÿÿ
+K
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ
+x
+java:S1192>"bDefine a constant instead of duplicating this literal "Nháº­p nÄƒm sáº£n xuáº¥t cá»§a xe" 3 times.(±Å××
+„
+java:S1192"iDefine a constant instead of duplicating this literal "src\\bai_tap_lam_them_2\\data\\xeMay.csv" 3 times.(¡ùŠ¸ùÿÿÿÿ
+Œ
+java:S11927"qDefine a constant instead of duplicating this literal "Biá»ƒn sá»‘ xe ko há»£p lá»‡, má»i nháº­p láº¡i" 4 times.(Ø±¸™ùÿÿÿÿ
+n
+java:S1192ª"RDefine a constant instead of duplicating this literal "XoÃ¡ thÃ nh cÃ´ng" 3 times.(®¢¦ışÿÿÿÿ
+|
+java:S1192@"aDefine a constant instead of duplicating this literal "Nháº­p chá»§ sá»Ÿ há»¯u cá»§a xe" 3 times.(¾Õò§ÿÿÿÿÿ
+l
+java:S11924"VDefine a constant instead of duplicating this literal "Nháº­p biá»ƒn sá»‘ xe" 3 times.(¸ÑçÏ
+}
+java:S1192"gDefine a constant instead of duplicating this literal "src\\bai_tap_lam_them_2\\data\\oto.csv" 3 times.(¬¿£ª
+
+java:S1192"iDefine a constant instead of duplicating this literal "src\\bai_tap_lam_them_2\\data\\xeTai.csv" 3 times.(ûŠÔá
+
+java:S1192;"tDefine a constant instead of duplicating this literal "Biá»ƒn sá»‘ xe Ä‘Ã£ tá»“n táº¡i, má»i nháº­p láº¡i" 3 times.(ÆİÊ§ÿÿÿÿÿ
+t	java:S135¤"YReduce the total number of break and continue statements in this loop to use at most one.(‰‘‡”ùÿÿÿÿ
+t	java:S135¸"YReduce the total number of break and continue statements in this loop to use at most one.(Æ…†Îûÿÿÿÿ
+o	java:S135Ì"YReduce the total number of break and continue statements in this loop to use at most one.(‹µ¤
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¤ú’ß

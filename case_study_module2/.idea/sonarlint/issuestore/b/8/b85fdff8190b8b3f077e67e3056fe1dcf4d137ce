@@ -1,10 +1,0 @@
-
-c	java:S116	"ORename this field "sÄT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó¿ç?
-O
-java:S5993"9Change the visibility of this constructor to "protected".(ÜÊ¸œ
-T
-java:S5993"9Change the visibility of this constructor to "protected".(¾ÆÆ§ÿÿÿÿÿ
-c	java:S100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬‘‰ô
-h	java:S100C"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¹ª÷ùÿÿÿÿ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÊ¸œ
-k	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¹ª÷ùÿÿÿÿ

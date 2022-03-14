@@ -1,0 +1,15 @@
+
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(ÞžÒ—üÿÿÿÿ
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(úûÛþ
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(Å«ã—ÿÿÿÿÿ
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(ÇªÇ‚
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(ÔÜßÓ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+c
+java:S1192("MDefine a constant instead of duplicating this literal "Nháº­t Báº£n" 4 times.(¬¸«°
++
+java:S1700"Rename field "hangXe"(éüÒÝ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®›œ°
