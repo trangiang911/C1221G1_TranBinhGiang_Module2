@@ -1,4 +1,4 @@
-package services.interface_service;
+package services;
 
-public interface IFacilityService {
+public interface IFacilityService extends IService {
 }

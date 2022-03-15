@@ -6,7 +6,7 @@ public class Employee extends Person{
     private String trinhDo;
     private double luong;
 
-    public Employee(String name, String dateOfbirth, String gender, int identityCard, String email, String sĐT, String maNV, String viTri, String trinhDo, double luong) {
+    public Employee(String name, String dateOfbirth, String gender, String identityCard, String email, String sĐT, String maNV, String viTri, String trinhDo, double luong) {
         super(name, dateOfbirth, gender, identityCard, email, sĐT);
         this.maNV = maNV;
         this.viTri = viTri;
@@ -21,7 +21,7 @@ public class Employee extends Person{
         this.luong = luong;
     }
     public Employee(){
-
+        super();
     }
 
     public String getMaNV() {

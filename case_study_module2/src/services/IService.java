@@ -1,7 +1,8 @@
-package services.interface_service;
+package services;
 
 public interface IService {
     void create();
-    void read();
-    
+    void display();
+    void edit();
+    void delete();
 }

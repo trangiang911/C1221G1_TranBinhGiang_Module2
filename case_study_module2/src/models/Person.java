@@ -4,11 +4,11 @@ public abstract class Person {
     private String name;
     private String dateOfbirth;
     private String gender;
-    private int identityCard;
+    private String identityCard;
     private String email;
     private String sĐT;
 
-    public Person(String name, String dateOfbirth, String gender, int identityCard, String email,String sĐT) {
+    public Person(String name, String dateOfbirth, String gender, String identityCard, String email,String sĐT) {
         this.name = name;
         this.dateOfbirth = dateOfbirth;
         this.gender = gender;
@@ -44,11 +44,11 @@ public abstract class Person {
         this.gender = gender;
     }
 
-    public int getIdentityCard() {
+    public String getIdentityCard() {
         return identityCard;
     }
 
-    public void setIdentityCard(int identityCard) {
+    public void setIdentityCard(String identityCard) {
         this.identityCard = identityCard;
     }
 
