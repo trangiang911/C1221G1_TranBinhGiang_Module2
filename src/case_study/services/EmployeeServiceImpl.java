@@ -1,7 +1,6 @@
 package case_study.services;
 
 import case_study.models.Employee;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -30,10 +29,10 @@ public class EmployeeServiceImpl implements IEmployeeService {
         String email = scanner.nextLine();
         System.out.println("Nhập số điện thoại nhân viên");
         String sdt = scanner.nextLine();
-        System.out.println("Nhập vị trí nhân viên");
-        String viTri = scanner.nextLine();
-        System.out.println("Nhập trình độ nhân viên");
-        String trinhDo = scanner.nextLine();
+//        System.out.println("Nhập vị trí nhân viên");
+        String viTri = viTri();
+//        System.out.println("Nhập trình độ nhân viên");
+        String trinhDo = trinhDo();
         System.out.println("Nhập lương của nhân viên");
         double luong = Double.parseDouble(scanner.nextLine());
         employeeList.add(new Employee(ten, birth, gioiTinh, cmnd, email, sdt, maNV, viTri, trinhDo, luong));
@@ -106,12 +105,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
                             break;
                         case 8:
                             System.out.println("Nhập vị trí mới của nhân viên");
-                            String vitriEdit=scanner.nextLine();
+                            String vitriEdit=viTri();
                             employeeList.get(i).setViTri(vitriEdit);
                             break;
                         case 9:
                             System.out.println("Nhập trình độ mới của nhân viên");
-                            String trinhDoEdit=scanner.nextLine();
+                            String trinhDoEdit=trinhDo();
                             employeeList.get(i).setTrinhDo(trinhDoEdit);
                             break;
                         case 10:
@@ -133,11 +132,92 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public void delete() {
+        display();
+        System.out.println("Nhập mã nhân vân cần xoá");
+        String maDel=scanner.nextLine();
+        for (int i = 0; i < employeeList.size() ; i++) {
+            if(employeeList.get(i).getMaNV().equals(maDel)){
+                System.out.println("Bạn có chắc xoá nhân viên này");
+                String choice=scanner.nextLine();
+                if("yes".equals(choice)){
+                    employeeList.remove(i);
+                    System.out.println("xoá thành công");
+                }
+            }
+        }
+    }
 
+    @Override
+    public String trinhDo() {
+        List<String> stringList=new ArrayList<>();
+        stringList.add("Trung cấp");
+        stringList.add("Cao đẳng");
+        stringList.add("Đại học");
+        stringList.add("Sau đại học");
+        System.out.println("Chọn trình độ của nhân viên");
+        System.out.println("1. Trung cấp\n" +
+                "2. Cao đẳng\n" +
+                "3. Đại học\n" +
+                "4. Sau đại học");
+        System.out.println("Nhập lựa chọn");
+        int choice=Integer.parseInt(scanner.nextLine());
+        switch (choice){
+            case 1:
+                return stringList.get(0);
+            case 2:
+                return stringList.get(1);
+            case 3:
+                return stringList.get(2);
+            case 4:
+                return stringList.get(3);
+            default:
+                System.out.println("Lựa chọn ko đúng");
+                return null;
+
+        }
+    }
+
+    @Override
+    public String viTri() {
+        List<String> stringList=new ArrayList<>();
+        stringList.add("Lễ tân");
+        stringList.add("Phục vụ");
+        stringList.add("Chuyên viên");
+        stringList.add("Giám sát");
+        stringList.add("Quản lý");
+        stringList.add("Giám đốc");
+        System.out.println("Chọn vị trí của nhân viên");
+        System.out.println("1. Lễ tân\n" +
+                "2. Phục vụ\n" +
+                "3. Chuyên viên\n" +
+                "4. Giám sát\n" +
+                "5. Quản lý\n" +
+                "6. Giám đốc");
+        System.out.println("Nhập lựa chọn");
+        int choice=Integer.parseInt(scanner.nextLine());
+        switch (choice){
+            case 1:
+                return stringList.get(0);
+            case 2:
+                return stringList.get(1);
+            case 3:
+                return stringList.get(2);
+            case 4:
+                return stringList.get(3);
+            case 5:
+                return stringList.get(4);
+            case 6:
+                return stringList.get(5);
+            default:
+                System.out.println("Lựa chọn ko hợp lệ");
+                return null;
+        }
     }
 
     public static void main(String[] args) {
         EmployeeServiceImpl employeeService=new EmployeeServiceImpl();
         employeeService.create();
+        employeeService.display();
+        employeeService.edit();
     }
 }

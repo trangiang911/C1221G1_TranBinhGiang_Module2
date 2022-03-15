@@ -3,22 +3,19 @@ package case_study.models;
 public class Customer extends Person {
     private String loaiKhach;
     private String maKhachHang;
+    private String diaChi;
 
-//    public Customer(String name, String dateOfbirth, String gender, String identityCard, String email, String loaiKhach, String maKhachHang, String sĐT) {
-//        super(name, dateOfbirth, gender, identityCard, email, sĐT);
-//        this.loaiKhach = loaiKhach;
-//        this.maKhachHang = maKhachHang;
-//    }
-
-    public Customer(String name, String dateOfbirth, String gender, String identityCard, String email, String sĐT, String loaiKhach, String maKhachHang) {
+    public Customer(String name, String dateOfbirth, String gender, String identityCard, String email, String sĐT, String loaiKhach, String maKhachHang, String diaChi) {
         super(name, dateOfbirth, gender, identityCard, email, sĐT);
         this.loaiKhach = loaiKhach;
         this.maKhachHang = maKhachHang;
+        this.diaChi=diaChi;
     }
 
-    public Customer(String loaiKhach, String maKhachHang) {
+    public Customer(String loaiKhach, String maKhachHang, String diaChi) {
         this.loaiKhach = loaiKhach;
         this.maKhachHang = maKhachHang;
+        this.diaChi= diaChi;
     }
 
     public Customer() {
@@ -41,11 +38,18 @@ public class Customer extends Person {
         this.maKhachHang = maKhachHang;
     }
 
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
+
     @Override
     public String toString() {
-        return "Customer{" + super.toString()+
-                "loaiKhach='" + loaiKhach + '\'' +
-                ", maKhachHang='" + maKhachHang + '\'' +
-                '}';
+        return super.toString() +
+                "," + loaiKhach +
+                "," + maKhachHang;
     }
 }

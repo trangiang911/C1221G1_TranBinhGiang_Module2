@@ -1,10 +1,14 @@
 package case_study.controllers;
 
+import case_study.services.CustomerServiceImpl;
+import case_study.services.EmployeeServiceImpl;
+
 import java.util.Scanner;
 
 public class FuramaController {
     Scanner scanner = new Scanner(System.in);
-
+    EmployeeServiceImpl employeeService=new EmployeeServiceImpl();
+    CustomerServiceImpl customerService=new CustomerServiceImpl();
     public void displayMainMenu() {
         System.out.println("Main Menu");
         int choice = -1;
@@ -22,12 +26,46 @@ public class FuramaController {
                             "2.\tAdd new employee\n" +
                             "3.\tEdit employee\n" +
                             "4.\tReturn main menu\n");
+                    System.out.println("Nhập lựa chọn");
+                    int choice1=Integer.parseInt(scanner.nextLine());
+                    switch (choice1){
+                        case 1:
+                            employeeService.display();
+                            break;
+                        case 2:
+                            employeeService.create();
+                            break;
+                        case 3:
+                            employeeService.edit();
+                        case 4:
+                            break;
+                        default:
+                            System.out.println("Lựa chọn k hợp lệ");
+                            break;
+                    }
                     break;
                 case 2:
                     System.out.println("1.\tDisplay list customers\n" +
                             "2.\tAdd new customer\n" +
                             "3.\tEdit customer\n" +
                             "4.\tReturn main menu\n");
+                    System.out.println("Nhập lựa chọn");
+                    int choice2=Integer.parseInt(scanner.nextLine());
+                    switch (choice2){
+                        case 1:
+                            customerService.display();
+                            break;
+                        case 2:
+                            customerService.create();
+                            break;
+                        case 3:
+                            customerService.edit();
+                        case 4:
+                            break;
+                        default:
+                            System.out.println("Lựa chọn k hợp lệ");
+                            break;
+                    }
                     break;
                 case 3:
                     System.out.println("1\tDisplay list facility\n" +

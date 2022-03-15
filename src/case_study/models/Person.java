@@ -70,13 +70,11 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", dateOfbirth='" + dateOfbirth + '\'' +
-                ", gender='" + gender + '\'' +
-                ", identityCard=" + identityCard +
-                ", email='" + email + '\'' +
-                ", sĐT='" + sĐT + '\'' +
-                '}';
+        return name +
+                "," + dateOfbirth +
+                "," + gender +
+                "," + identityCard +
+                "," + email +
+                "," + sĐT;
     }
 }

@@ -60,11 +60,10 @@ public class Employee extends Person{
 
     @Override
     public String toString() {
-        return "Employee{" + super.toString()+
-                "maNV='" + maNV + '\'' +
-                ", viTri='" + viTri + '\'' +
-                ", trinhDo='" + trinhDo + '\'' +
-                ", luong=" + luong +
-                '}';
+        return super.toString()+
+                "," + maNV +
+                "," + viTri +
+                "," + trinhDo +
+                "," + luong;
     }
 }
