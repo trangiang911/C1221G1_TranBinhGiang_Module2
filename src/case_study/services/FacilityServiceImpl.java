@@ -24,18 +24,24 @@ public class FacilityServiceImpl implements IFacilityService {
         String[] arr2;
         String[] arr3;
         for (int i = 0; i < villaList1.size(); i++) {
-            arr1 = villaList1.get(i).split(",");
-            Villa villa = new Villa(arr1[0], arr1[1], Integer.parseInt(arr1[2]), Double.parseDouble(arr1[3]), Integer.parseInt(arr1[4]), arr1[5], arr1[6], Integer.parseInt(arr1[7]), Integer.parseInt(arr1[8]));
-            villaList.add(villa);
+            if (!villaList1.get(i).isEmpty()) {
+                arr1 = villaList1.get(i).split(",");
+                Villa villa = new Villa(arr1[0], arr1[1], Integer.parseInt(arr1[2]), Double.parseDouble(arr1[3]), Integer.parseInt(arr1[4]), arr1[5], arr1[6], Integer.parseInt(arr1[7]), Integer.parseInt(arr1[8]));
+                villaList.add(villa);
+            }
         }
-        for (int i = 0; i <houseList1.size() ; i++) {
-            arr2 =houseList1.get(i).split(",");
-            House house=new House(arr2[0],arr2[1],Integer.parseInt(arr2[2]),Double.parseDouble(arr2[3]),Integer.parseInt(arr2[4]),arr2[5],arr2[6],Integer.parseInt(arr2[7]));
-            housesList.add(house);
+        for (int i = 0; i < houseList1.size(); i++) {
+            if (!houseList1.get(i).isEmpty()) {
+                arr2 = houseList1.get(i).split(",");
+                House house = new House(arr2[0], arr2[1], Integer.parseInt(arr2[2]), Double.parseDouble(arr2[3]), Integer.parseInt(arr2[4]), arr2[5], arr2[6], Integer.parseInt(arr2[7]));
+                housesList.add(house);
+            }
         }
-        for (int i = 0; i < roomList1.size() ; i++) {
-            arr3=roomList1.get(i).split(",");
-            Room room=new Room(arr3[0],arr3[1],Integer.parseInt(arr3[2]),Double.parseDouble(arr3[3]),Integer.parseInt(arr3[4]),arr3[5],arr3[5]);
+        for (int i = 0; i < roomList1.size(); i++) {
+            if (!roomList1.get(i).isEmpty()) {
+                arr3 = roomList1.get(i).split(",");
+                Room room = new Room(arr3[0], arr3[1], Integer.parseInt(arr3[2]), Double.parseDouble(arr3[3]), Integer.parseInt(arr3[4]), arr3[5], arr3[5]);
+            }
         }
     }
 
@@ -63,22 +69,52 @@ public class FacilityServiceImpl implements IFacilityService {
                     tenDichVu = scanner.nextLine();
                 }
                 System.out.println("Nhập diện tích sử dụng");
-                int dienTich = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkRegexDienTichVaBeBoi(dienTich)) {
-                    System.out.println("Diện tích sử dụng ko hợp lệ phải lớn hơn 30");
-                    dienTich = Integer.parseInt(scanner.nextLine());
+                String str1=scanner.nextLine();
+                while (!Regex.checkRegexDienTichVaBeBoi(str1)) {
+                    System.out.println("Diện tích sử dụng ko hợp lệ");
+                    str1 = scanner.nextLine();
+                }
+                int dienTich = Integer.parseInt(str1);
+                while (dienTich<30){
+                    System.out.println("Diện tích phải lớn hơn 30");
+                    str1= scanner.nextLine();
+                    while (!Regex.checkRegexDienTichVaBeBoi(str1)) {
+                        System.out.println("Diện tích sử dụng ko hợp lệ");
+                        str1 = scanner.nextLine();
+                    }
+                    dienTich=Integer.parseInt(str1);
                 }
                 System.out.println("Nhập giá thuê");
-                double giaThue = Double.parseDouble(scanner.nextLine());
-                while (!Regex.checkChiPhiThue(giaThue)) {
-                    System.out.println("Giá thuê là số nguyên dương, mời nhập lại");
-                    giaThue = Double.parseDouble(scanner.nextLine());
+                String str2=scanner.nextLine();
+                while (!Regex.checkChiPhiThue(str2)) {
+                    System.out.println("ko hợp lệ mời nhập lại");
+                    str2 =scanner.nextLine();
+                }
+                double giaThue = Double.parseDouble(str2);
+                while (giaThue<0){
+                    System.out.println("Giá thuê phải dương mời nhập lại");
+                    str2=scanner.nextLine();
+                    while (!Regex.checkChiPhiThue(str2)) {
+                        System.out.println("ko hợp lệ mời nhập lại");
+                        str2 =scanner.nextLine();
+                    }
+                    giaThue=Double.parseDouble(str2);
                 }
                 System.out.println("Nhập số lương người tối đa");
-                int sLToiDa = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkSLNguoi(sLToiDa)) {
+                String str3=scanner.nextLine();
+                while (!Regex.checkSLNguoi(str3)) {
                     System.out.println("Số lương người nhập vào ko hợp lệ mời nhập lại");
-                    sLToiDa = Integer.parseInt(scanner.nextLine());
+                    str3 = scanner.nextLine();
+                }
+                int sLToiDa = Integer.parseInt(str3);
+                while (sLToiDa<0 || sLToiDa>20){
+                    System.out.println("Số lượng người ko hợp lệ");
+                    str3=scanner.nextLine();
+                    while (!Regex.checkSLNguoi(str3)) {
+                        System.out.println("Số lương người nhập vào ko hợp lệ mời nhập lại");
+                        str3 = scanner.nextLine();
+                    }
+                    sLToiDa=Integer.parseInt(str3);
                 }
                 System.out.println("Chọn kiểu thuê");
                 String kieuThue = kieuThue();
@@ -89,16 +125,36 @@ public class FacilityServiceImpl implements IFacilityService {
                     tieuChuan = scanner.nextLine();
                 }
                 System.out.println("Nhập Diện tích bể bơi");
-                int dienTichBeBoi = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkRegexDienTichVaBeBoi(dienTichBeBoi)) {
+                String str4=scanner.nextLine();
+                while (!Regex.checkRegexDienTichVaBeBoi(str4)) {
                     System.out.println("Diện tích bể bơi ko hợp lệ mời nhập lại");
-                    dienTichBeBoi = Integer.parseInt(scanner.nextLine());
+                    str4 = scanner.nextLine();
+                }
+                int dienTichBeBoi = Integer.parseInt(str4);
+                while (dienTichBeBoi<30){
+                    System.out.println("Diện tích bể bơi phảo lớn hơn 30");
+                    str4=scanner.nextLine();
+                    while (!Regex.checkRegexDienTichVaBeBoi(str4)) {
+                        System.out.println("Diện tích bể bơi ko hợp lệ mời nhập lại");
+                        str4 = scanner.nextLine();
+                    }
+                    dienTichBeBoi=Integer.parseInt(str4);
                 }
                 System.out.println("Nhập số tầng");
-                int soTang = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkSoTang(soTang)) {
+                String str5=scanner.nextLine();
+                while (!Regex.checkSoTang(str5)) {
                     System.out.println("Số tần ko hợp lệ mời nhập lại");
-                    soTang = Integer.parseInt(scanner.nextLine());
+                    str5 = scanner.nextLine();
+                }
+                int soTang = Integer.parseInt(str5);
+                while (soTang<0){
+                    System.out.println("Số tầng phải là số dương");
+                    str5=scanner.nextLine();
+                    while (!Regex.checkSoTang(str5)) {
+                        System.out.println("Số tần ko hợp lệ mời nhập lại");
+                        str5 = scanner.nextLine();
+                    }
+                    soTang=Integer.parseInt(str5);
                 }
                 Villa villa = new Villa(maDichVu, tenDichVu, dienTich, giaThue, sLToiDa, kieuThue, tieuChuan, dienTichBeBoi, soTang);
                 listFacility.put(villa, 0);
@@ -119,22 +175,52 @@ public class FacilityServiceImpl implements IFacilityService {
                     tenDichVuHouse = scanner.nextLine();
                 }
                 System.out.println("Nhập diện tích sử dụng");
-                int dienTichHouse = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkRegexDienTichVaBeBoi(dienTichHouse)) {
+                String str6=scanner.nextLine();
+                while (!Regex.checkRegexDienTichVaBeBoi(str6)) {
                     System.out.println("Diện tích sử dụng ko hợp lệ phải lớn hơn 30");
-                    dienTichHouse = Integer.parseInt(scanner.nextLine());
+                    str6 =scanner.nextLine();
+                }
+                int dienTichHouse = Integer.parseInt(str6);
+                while (dienTichHouse<30){
+                    System.out.println("Diện tích phải lớn hơn 30");
+                    str6= scanner.nextLine();
+                    while (!Regex.checkRegexDienTichVaBeBoi(str6)) {
+                        System.out.println("Diện tích sử dụng ko hợp lệ");
+                        str6 = scanner.nextLine();
+                    }
+                    dienTichHouse=Integer.parseInt(str6);
                 }
                 System.out.println("Nhập giá thuê");
-                double giaThueHouse = Double.parseDouble(scanner.nextLine());
-                while (!Regex.checkChiPhiThue(giaThueHouse)) {
+                String str7=scanner.nextLine();
+                while (!Regex.checkChiPhiThue(str7)) {
                     System.out.println("Giá thuê là số nguyên dương, mời nhập lại");
-                    giaThueHouse = Double.parseDouble(scanner.nextLine());
+                    str7 =scanner.nextLine();
+                }
+                double giaThueHouse = Double.parseDouble(str7);
+                while (giaThueHouse<0) {
+                    System.out.println("Giá thuê phải là số dương");
+                    str7=scanner.nextLine();
+                    while (!Regex.checkChiPhiThue(str7)) {
+                        System.out.println("ko hợp lệ mời nhập lại");
+                        str7 =scanner.nextLine();
+                    }
+                    giaThueHouse=Double.parseDouble(str7);
                 }
                 System.out.println("Nhập số lương người tối đa");
-                int sLToiDaHouse = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkSLNguoi(sLToiDaHouse)) {
+                String str8=scanner.nextLine();
+                while (!Regex.checkSLNguoi(str8)) {
                     System.out.println("Số lương người nhập vào ko hợp lệ mời nhập lại");
-                    sLToiDaHouse = Integer.parseInt(scanner.nextLine());
+                    str8 =scanner.nextLine();
+                }
+                int sLToiDaHouse = Integer.parseInt(str8);
+                while (sLToiDaHouse<0 || sLToiDaHouse>20) {
+                    System.out.println("Số lượng người ko hợp lệ");
+                    str8=scanner.nextLine();
+                    while (!Regex.checkSLNguoi(str8)) {
+                        System.out.println("Số lương người nhập vào ko hợp lệ mời nhập lại");
+                        str8 = scanner.nextLine();
+                    }
+                    sLToiDaHouse=Integer.parseInt(str8);
                 }
                 System.out.println("Chọn kiểu thuê");
                 String kieuThueHouse = kieuThue();
@@ -145,10 +231,20 @@ public class FacilityServiceImpl implements IFacilityService {
                     tieuChuanHouse = scanner.nextLine();
                 }
                 System.out.println("Nhập số tầng");
-                int soTangHouse = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkSoTang(soTangHouse)) {
+                String str9=scanner.nextLine();
+                while (!Regex.checkSoTang(str9)) {
                     System.out.println("Số tần ko hợp lệ mời nhập lại");
-                    soTangHouse = Integer.parseInt(scanner.nextLine());
+                    str9 =scanner.nextLine();
+                }
+                int soTangHouse = Integer.parseInt(str9);
+                while (soTangHouse<0){
+                    System.out.println("Sô tầng phải là số dương");
+                    str9=scanner.nextLine();
+                    while (!Regex.checkSoTang(str9)) {
+                        System.out.println("Số tần ko hợp lệ mời nhập lại");
+                        str5 = scanner.nextLine();
+                    }
+                    soTangHouse=Integer.parseInt(str9);
                 }
                 House house = new House(maDichVuHouse, tenDichVuHouse, dienTichHouse, giaThueHouse, sLToiDaHouse, kieuThueHouse, tieuChuanHouse, soTangHouse);
                 housesList.add(house);
@@ -169,22 +265,52 @@ public class FacilityServiceImpl implements IFacilityService {
                     tenDichVuRoom = scanner.nextLine();
                 }
                 System.out.println("Nhập diện tích sử dụng");
-                int dienTichRoom = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkRegexDienTichVaBeBoi(dienTichRoom)) {
+                String str10=scanner.nextLine();
+                while (!Regex.checkRegexDienTichVaBeBoi(str10)) {
                     System.out.println("Diện tích sử dụng ko hợp lệ phải lớn hơn 30");
-                    dienTichRoom = Integer.parseInt(scanner.nextLine());
+                    str10 =scanner.nextLine();
+                }
+                int dienTichRoom = Integer.parseInt(str10);
+                while (dienTichRoom<30){
+                    System.out.println("Diện tích phải lớn hơn 30");
+                    str10= scanner.nextLine();
+                    while (!Regex.checkRegexDienTichVaBeBoi(str10)) {
+                        System.out.println("Diện tích sử dụng ko hợp lệ");
+                        str10 = scanner.nextLine();
+                    }
+                    dienTichHouse=Integer.parseInt(str10);
                 }
                 System.out.println("Nhập giá thuê");
-                double giaThueRoom = Double.parseDouble(scanner.nextLine());
-                while (!Regex.checkChiPhiThue(giaThueRoom)) {
+                String str11=scanner.nextLine();
+                while (!Regex.checkChiPhiThue(str11)) {
                     System.out.println("Giá thuê là số nguyên dương, mời nhập lại");
-                    giaThueRoom = Double.parseDouble(scanner.nextLine());
+                    str11= scanner.nextLine();
+                }
+                double giaThueRoom = Double.parseDouble(str11);
+                while (giaThueRoom<0){
+                    System.out.println("Giá thuê phải là số dương");
+                    str11=scanner.nextLine();
+                    while (!Regex.checkChiPhiThue(str11)) {
+                        System.out.println("ko hợp lệ mời nhập lại");
+                        str11 =scanner.nextLine();
+                    }
+                    giaThueRoom=Double.parseDouble(str11);
                 }
                 System.out.println("Nhập số lương người tối đa");
-                int sLToiDaRoom = Integer.parseInt(scanner.nextLine());
-                while (!Regex.checkSLNguoi(sLToiDaRoom)) {
+                String str12=scanner.nextLine();
+                while (!Regex.checkSLNguoi(str12)) {
                     System.out.println("Số lương người nhập vào ko hợp lệ mời nhập lại");
-                    sLToiDaRoom = Integer.parseInt(scanner.nextLine());
+                    str12 =scanner.nextLine();
+                }
+                int sLToiDaRoom = Integer.parseInt(str12);
+                while (sLToiDaRoom<0||sLToiDaRoom>20){
+                    System.out.println("Số lượng người ko hợp lệ");
+                    str12=scanner.nextLine();
+                    while (!Regex.checkSLNguoi(str12)) {
+                        System.out.println("Số lương người nhập vào ko hợp lệ mời nhập lại");
+                        str12 = scanner.nextLine();
+                    }
+                    sLToiDaRoom=Integer.parseInt(str12);
                 }
                 System.out.println("Chọn kiểu thuê");
                 String kieuThueRoom = kieuThue();

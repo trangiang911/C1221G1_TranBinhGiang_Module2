@@ -5,32 +5,45 @@ import case_study.services.EmployeeServiceImpl;
 import case_study.services.FacilityServiceImpl;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class FuramaController {
     Scanner scanner = new Scanner(System.in);
-    EmployeeServiceImpl employeeService=new EmployeeServiceImpl();
-    CustomerServiceImpl customerService=new CustomerServiceImpl();
-    FacilityServiceImpl facilityService=new FacilityServiceImpl();
+    EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+    CustomerServiceImpl customerService = new CustomerServiceImpl();
+    FacilityServiceImpl facilityService = new FacilityServiceImpl();
+
     public void displayMainMenu() {
         System.out.println("Main Menu");
         int choice = -1;
         do {
-            System.out.println("1.\tEmployee Management\n"+
-                    "2.\tCustomer Management\n"+
-                    "3.\tFacility Management\n"+
-                    "4.\tBooking Management\n"+
-                    "5.\tPromotion Management\n"+
+            System.out.println("1.\tEmployee Management\n" +
+                    "2.\tCustomer Management\n" +
+                    "3.\tFacility Management\n" +
+                    "4.\tBooking Management\n" +
+                    "5.\tPromotion Management\n" +
                     "6.\tExit");
-            choice=Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            System.out.println("Nhập lựa chọn");
+            String str=scanner.nextLine();
+            while (!Pattern.matches("^[0-9]{1}",str)){
+                System.out.println("Lựa chọn phải là số, mời nhập lại");
+                str=scanner.nextLine();
+            }
+            choice = Integer.parseInt(str);
+            switch (choice) {
                 case 1:
                     System.out.println("1.\tDisplay list employees\n" +
                             "2.\tAdd new employee\n" +
                             "3.\tEdit employee\n" +
                             "4.\tReturn main menu\n");
                     System.out.println("Nhập lựa chọn");
-                    int choice1=Integer.parseInt(scanner.nextLine());
-                    switch (choice1){
+                    String str1=scanner.nextLine();
+                    while (!Pattern.matches("^[0-9]{1}$",str1)){
+                        System.out.println("Lựa chọn phải là số nguyên, mời nhập lại");
+                        str1=scanner.nextLine();
+                    }
+                    int choice1 = Integer.parseInt(str1);
+                    switch (choice1) {
                         case 1:
                             employeeService.display();
                             break;
@@ -52,8 +65,13 @@ public class FuramaController {
                             "3.\tEdit customer\n" +
                             "4.\tReturn main menu\n");
                     System.out.println("Nhập lựa chọn");
-                    int choice2=Integer.parseInt(scanner.nextLine());
-                    switch (choice2){
+                    String str2=scanner.nextLine();
+                    while (!Pattern.matches("^[0-9]{1}$",str2)){
+                        System.out.println("Lựa chọn phải là số nguyên dương, mời nhập lại");
+                        str2=scanner.nextLine();
+                    }
+                    int choice2 = Integer.parseInt(str2);
+                    switch (choice2) {
                         case 1:
                             customerService.display();
                             break;
@@ -75,8 +93,13 @@ public class FuramaController {
                             "3\tDisplay list facility maintenance\n" +
                             "4\tReturn main menu\n");
                     System.out.println("Nhập lựa chọn");
-                    int choice3=Integer.parseInt(scanner.nextLine());
-                    switch (choice3){
+                    String str3=scanner.nextLine();
+                    while (!Pattern.matches("^[0-9]{1}$",str3)){
+                        System.out.println("Lựa chọn phải là số nguyên dương,mời nhập lại");
+                        str3=scanner.nextLine();
+                    }
+                    int choice3 = Integer.parseInt(scanner.nextLine());
+                    switch (choice3) {
                         case 1:
                             facilityService.display();
                             break;
@@ -112,6 +135,6 @@ public class FuramaController {
                     System.out.println("Lựa chọn k đúng");
                     break;
             }
-        }while (choice!=6);
+        } while (choice != 6);
     }
 }

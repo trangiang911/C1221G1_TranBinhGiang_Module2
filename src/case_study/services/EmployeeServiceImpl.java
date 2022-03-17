@@ -12,12 +12,16 @@ public class EmployeeServiceImpl implements IEmployeeService {
     private static List<Employee> employeeList = new ArrayList<>();
 
     static {
-        List<String> employeeList1=ReadAndWrite.read("src\\case_study\\data\\employee.csv");
+        List<String> employeeList1 = ReadAndWrite.read("src\\case_study\\data\\employee.csv");
         String[] arr;
-        for (int i = 0; i <employeeList1.size() ; i++) {
-            arr=employeeList1.get(i).split(",");
-            Employee employee=new Employee(arr[0],arr[1],arr[2],arr[3],arr[4],arr[5],arr[6],arr[7],arr[8],Double.parseDouble(arr[9]));
-            employeeList.add(employee);
+        if (employeeList1.size()>0) {
+            for (int i = 0; i < employeeList1.size(); i++) {
+                if (!employeeList1.get(i).isEmpty()) {
+                    arr = employeeList1.get(i).split(",");
+                    Employee employee = new Employee(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], Double.parseDouble(arr[9]));
+                    employeeList.add(employee);
+                }
+            }
         }
     }
 
@@ -44,7 +48,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.println("Nhập lương của nhân viên");
         double luong = Double.parseDouble(scanner.nextLine());
         employeeList.add(new Employee(ten, birth, gioiTinh, cmnd, email, sdt, maNV, viTri, trinhDo, luong));
-        ReadAndWrite.write("src\\case_study\\data\\employee.csv",employeeList,false);
+        ReadAndWrite.write("src\\case_study\\data\\employee.csv", employeeList, false);
     }
 
     @Override
@@ -60,7 +64,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.println("Nhập mã nhân viên cần chỉnh sửa thông tin");
         String idEdit = scanner.nextLine();
         for (int i = 0; i < employeeList.size(); i++) {
-            String choice1=null;
+            String choice1 = null;
             do {
                 if (employeeList.get(i).getMaNV().equals(idEdit)) {
                     System.out.println("Lựa chọn thông tin cần chỉnh sửa");
@@ -76,55 +80,55 @@ public class EmployeeServiceImpl implements IEmployeeService {
                             "10. Chỉnh sửa lương nhân viên");
                     System.out.println("Nhập Lựa chọn");
                     int choice = Integer.parseInt(scanner.nextLine());
-                    switch (choice){
+                    switch (choice) {
                         case 1:
                             System.out.println("Nhập tên mới của nhân viên");
-                            String nameEdit=scanner.nextLine();
+                            String nameEdit = scanner.nextLine();
                             employeeList.get(i).setName(nameEdit);
                             break;
                         case 2:
                             System.out.println("Nhập ngày tháng năm sinh mới của nhân viên");
-                            String birthEdit=scanner.nextLine();
+                            String birthEdit = scanner.nextLine();
                             employeeList.get(i).setDateOfbirth(birthEdit);
                             break;
                         case 3:
                             System.out.println("Nhập giới tính mới của nhân viên");
-                            String genderEdit=scanner.nextLine();
+                            String genderEdit = scanner.nextLine();
                             employeeList.get(i).setGender(genderEdit);
                             break;
                         case 4:
                             System.out.println("Nhập số cmnd (hoặc căn cước) mới của nhân viên");
-                            String cmndEdit=scanner.nextLine();
+                            String cmndEdit = scanner.nextLine();
                             employeeList.get(i).setIdentityCard(cmndEdit);
                             break;
                         case 5:
                             System.out.println("Nhập mã nhân viên mới của nhân viên");
-                            String maEdit=scanner.nextLine();
+                            String maEdit = scanner.nextLine();
                             employeeList.get(i).setMaNV(maEdit);
                             break;
                         case 6:
                             System.out.println("Nhập email mới của nhân viên");
-                            String emailEdit=scanner.nextLine();
+                            String emailEdit = scanner.nextLine();
                             employeeList.get(i).setEmail(emailEdit);
                             break;
                         case 7:
                             System.out.println("Nhập số điện thoai mới của nhân viên");
-                            String sdtEdit=scanner.nextLine();
+                            String sdtEdit = scanner.nextLine();
                             employeeList.get(i).setsĐT(sdtEdit);
                             break;
                         case 8:
                             System.out.println("Nhập vị trí mới của nhân viên");
-                            String vitriEdit=viTri();
+                            String vitriEdit = viTri();
                             employeeList.get(i).setViTri(vitriEdit);
                             break;
                         case 9:
                             System.out.println("Nhập trình độ mới của nhân viên");
-                            String trinhDoEdit=trinhDo();
+                            String trinhDoEdit = trinhDo();
                             employeeList.get(i).setTrinhDo(trinhDoEdit);
                             break;
                         case 10:
                             System.out.println("Nhập lương mới của nhân viên");
-                            double luongEdit=Double.parseDouble(scanner.nextLine());
+                            double luongEdit = Double.parseDouble(scanner.nextLine());
                             employeeList.get(i).setLuong(luongEdit);
                             break;
                         default:
@@ -134,7 +138,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
                 }
                 System.out.println("Bạn có muốn tiếp tục chỉnh sửa nhân viên này (yes or no)");
-                choice1=scanner.nextLine();
+                choice1 = scanner.nextLine();
             } while ("yes".equals(choice1));
         }
     }
@@ -143,12 +147,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
     public void delete() {
         display();
         System.out.println("Nhập mã nhân vân cần xoá");
-        String maDel=scanner.nextLine();
-        for (int i = 0; i < employeeList.size() ; i++) {
-            if(employeeList.get(i).getMaNV().equals(maDel)){
+        String maDel = scanner.nextLine();
+        for (int i = 0; i < employeeList.size(); i++) {
+            if (employeeList.get(i).getMaNV().equals(maDel)) {
                 System.out.println("Bạn có chắc xoá nhân viên này");
-                String choice=scanner.nextLine();
-                if("yes".equals(choice)){
+                String choice = scanner.nextLine();
+                if ("yes".equals(choice)) {
                     employeeList.remove(i);
                     System.out.println("xoá thành công");
                 }
@@ -158,7 +162,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public String trinhDo() {
-        List<String> stringList=new ArrayList<>();
+        List<String> stringList = new ArrayList<>();
         stringList.add("Trung cấp");
         stringList.add("Cao đẳng");
         stringList.add("Đại học");
@@ -169,8 +173,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 "3. Đại học\n" +
                 "4. Sau đại học");
         System.out.println("Nhập lựa chọn");
-        int choice=Integer.parseInt(scanner.nextLine());
-        switch (choice){
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
             case 1:
                 return stringList.get(0);
             case 2:
@@ -188,7 +192,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public String viTri() {
-        List<String> stringList=new ArrayList<>();
+        List<String> stringList = new ArrayList<>();
         stringList.add("Lễ tân");
         stringList.add("Phục vụ");
         stringList.add("Chuyên viên");
@@ -203,8 +207,8 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 "5. Quản lý\n" +
                 "6. Giám đốc");
         System.out.println("Nhập lựa chọn");
-        int choice=Integer.parseInt(scanner.nextLine());
-        switch (choice){
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
             case 1:
                 return stringList.get(0);
             case 2:
@@ -223,10 +227,4 @@ public class EmployeeServiceImpl implements IEmployeeService {
         }
     }
 
-    public static void main(String[] args) {
-        EmployeeServiceImpl employeeService=new EmployeeServiceImpl();
-        employeeService.create();
-        employeeService.display();
-        employeeService.edit();
-    }
 }

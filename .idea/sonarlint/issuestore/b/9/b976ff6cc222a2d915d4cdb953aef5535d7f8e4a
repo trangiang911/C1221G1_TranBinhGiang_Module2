@@ -1,0 +1,15 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(±Ş÷ÿÿÿÿÿ
+_
+java:S2147."DCombine this catch with the one at line 43, which has the same body.(©œ¡ÿÿÿÿÿ
+Y
+java:S1128"7Remove this unused import 'case_study.models.Facility'.(™¿¦ğøÿÿÿÿ8Ó‘Ë¯ù/
+P
+java:S1128"4Remove this unused import 'case_study.models.Villa'.(îìõo8Ó‘Ë¯ù/
+L
+java:S1128	"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8Ó‘Ë¯ù/
+b
+java:S2095$"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(Å€ÒÂ
+g
+java:S2095"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(ÀÍõ´ùÿÿÿÿ

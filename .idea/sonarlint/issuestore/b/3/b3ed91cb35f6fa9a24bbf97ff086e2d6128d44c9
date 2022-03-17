@@ -1,0 +1,30 @@
+
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ú¯·Í
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ó·¦¶øÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(œ–¢È
+N	java:S106"9Replace this use of System.out or System.err by a logger.(–¨°‡
+N	java:S106"9Replace this use of System.out or System.err by a logger.(õ¼º
+N	java:S106#"9Replace this use of System.out or System.err by a logger.(¿®„ò
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(–¨°‡
+N	java:S106*"9Replace this use of System.out or System.err by a logger.(û€ä†
+f	java:S1285"LEnd this switch case with an unconditional break, return or throw statement.(‰ÆÄÎşÿÿÿÿ
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(ô¸èöúÿÿÿÿ
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(úà€
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(–¨°‡
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(ªßªª
+f	java:S128Q"LEnd this switch case with an unconditional break, return or throw statement.(‰ÆÄÎşÿÿÿÿ
+S	java:S106V"9Replace this use of System.out or System.err by a logger.(ô¸èöúÿÿÿÿ
+N	java:S106["9Replace this use of System.out or System.err by a logger.(³“”
+N	java:S106_"9Replace this use of System.out or System.err by a logger.(–¨°‡
+N	java:S106b"9Replace this use of System.out or System.err by a logger.(ªßªª
+S	java:S106s"9Replace this use of System.out or System.err by a logger.(ô¸èöúÿÿÿÿ
+S	java:S106x"9Replace this use of System.out or System.err by a logger.(˜Äìşÿÿÿÿ
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(Ó Ÿ°øÿÿÿÿ
+T	java:S106‡"9Replace this use of System.out or System.err by a logger.(ƒšŸ‡şÿÿÿÿ
+a
+java:S1192)"KDefine a constant instead of duplicating this literal "^[0-9]{1}$" 3 times.(Î‚ó
+j
+java:S1192"TDefine a constant instead of duplicating this literal "Nháº­p lá»±a chá»n" 4 times.(–¨°‡
+u
+java:S1192:"ZDefine a constant instead of duplicating this literal "Lá»±a chá»n k há»£p lá»‡" 3 times.(ô¸èöúÿÿÿÿ

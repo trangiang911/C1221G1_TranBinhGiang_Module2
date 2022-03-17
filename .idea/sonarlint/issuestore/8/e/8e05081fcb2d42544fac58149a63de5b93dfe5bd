@@ -1,0 +1,41 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Ê’­øÿÿÿÿ
+W
+java:S1126"AReplace this if-then-else statement by a single return statement.(°½ŞÅ
+W
+java:S1126"AReplace this if-then-else statement by a single return statement.(ü¹›¯
+W
+java:S1126"AReplace this if-then-else statement by a single return statement.(Üä¤®
+\
+java:S1126"AReplace this if-then-else statement by a single return statement.(ŒÊîÃÿÿÿÿÿ
+\
+java:S1126'"AReplace this if-then-else statement by a single return statement.(¤Í±êúÿÿÿÿ
+\
+java:S1126/"AReplace this if-then-else statement by a single return statement.(Ù¡Ì¬ıÿÿÿÿ
+\
+java:S11267"AReplace this if-then-else statement by a single return statement.(ƒ¬Âşúÿÿÿÿ
+\
+java:S1126?"AReplace this if-then-else statement by a single return statement.(Ù¡Ì¬ıÿÿÿÿ
+\
+java:S1126G"AReplace this if-then-else statement by a single return statement.(÷–Š½úÿÿÿÿ
+g
+java:S5998G"LRefactor this repetition that can lead to a stack overflow for large inputs.(÷–Š½úÿÿÿÿ
+W
+java:S1126O"AReplace this if-then-else statement by a single return statement.(ïø¸
+W
+java:S1126W"AReplace this if-then-else statement by a single return statement.(İŒáÀ
+@
+java:S5869W"*Remove duplicates in this character class.(İŒáÀ
+W
+java:S1126_"AReplace this if-then-else statement by a single return statement.(•ùò
+F
+java:S6035_"0Replace this alternation with a character class.(•ùò
+F
+java:S6035_"0Replace this alternation with a character class.(•ùò
+F
+java:S6035_"0Replace this alternation with a character class.(•ùò
+F
+java:S6035_"0Replace this alternation with a character class.(•ùò
+k
+java:S5843_"USimplify this regular expression to reduce its complexity from 106 to the 20 allowed.(•ùò
