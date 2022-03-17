@@ -1,15 +1,0 @@
-
-S	java:S106"9Replace this use of System.out or System.err by a logger.(ó·¦¶øÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(œ–¢È
-N	java:S106"9Replace this use of System.out or System.err by a logger.(¿®„ò
-N	java:S106"9Replace this use of System.out or System.err by a logger.(–¨°‡
-f	java:S128&"LEnd this switch case with an unconditional break, return or throw statement.(‰ÆÄÎşÿÿÿÿ
-S	java:S106+"9Replace this use of System.out or System.err by a logger.(ô¸èöúÿÿÿÿ
-N	java:S1060"9Replace this use of System.out or System.err by a logger.(úà€
-N	java:S1064"9Replace this use of System.out or System.err by a logger.(–¨°‡
-m	java:S128="LEnd this switch case with an unconditional break, return or throw statement.(‰ÆÄÎşÿÿÿÿ8Óš²åø/
-S	java:S106B"9Replace this use of System.out or System.err by a logger.(ô¸èöúÿÿÿÿ
-N	java:S106G"9Replace this use of System.out or System.err by a logger.(³“”
-S	java:S106M"9Replace this use of System.out or System.err by a logger.(˜Äìşÿÿÿÿ
-S	java:S106U"9Replace this use of System.out or System.err by a logger.(Ó Ÿ°øÿÿÿÿ
-Z	java:S106\"9Replace this use of System.out or System.err by a logger.(ƒšŸ‡şÿÿÿÿ8Õš²åø/

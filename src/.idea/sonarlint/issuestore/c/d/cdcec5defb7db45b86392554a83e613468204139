@@ -44,10 +44,6 @@ T	java:S106Î"9Replace this use of System.out or System.err by a logger.(ðäÜôû
 
 java:S1157Ð"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(Ë‡¬Ýüÿÿÿÿ
 T	java:S106Ò"9Replace this use of System.out or System.err by a logger.(®¢¦ýþÿÿÿÿ
-m
-java:S1128"RRemove this unused import 'ss16_io_text_file.bai_tap.copy_file_text.ReadAndWrite'.(»®±Ùúÿÿÿÿ
-K
-java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ
 x
 java:S1192>"bDefine a constant instead of duplicating this literal "Nháº­p nÄƒm sáº£n xuáº¥t cá»§a xe" 3 times.(±Å××
 „

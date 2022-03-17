@@ -1,6 +1,7 @@
 package case_study.services;
 
 import case_study.models.Customer;
+import case_study.utils.ReadAndWrite;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -12,7 +13,13 @@ public class CustomerServiceImpl implements ICustomerService {
     private static List<Customer> customerList = new LinkedList<>();
 
     static {
-
+        List<String> stringList=ReadAndWrite.read("src\\case_study\\data\\customer.csv");
+        String[] arr;
+        for (int i = 0; i <stringList.size() ; i++) {
+            arr=stringList.get(i).split(",");
+            Customer customer=new Customer(arr[0],arr[1],arr[2],arr[3],arr[4],arr[5],arr[6],arr[7],arr[8]);
+            customerList.add(customer);
+        }
     }
 
     @Override
@@ -36,12 +43,13 @@ public class CustomerServiceImpl implements ICustomerService {
         System.out.println("Nhập địa chỉ của khách hàng");
         String daiChiKhach = scanner.nextLine();
         customerList.add(new Customer(nameKhach, birthKhach, genderKhach, cmndKhach, emailKhach, sdtKhach, loaiKhach, maKhach, daiChiKhach));
+        ReadAndWrite.write("src\\case_study\\data\\customer.csv",customerList,false);
     }
 
     @Override
     public void display() {
         for (Customer element : customerList) {
-            System.out.println(element);
+            System.out.println(element.toStringRead());
         }
     }
 

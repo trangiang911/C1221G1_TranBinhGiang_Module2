@@ -2,24 +2,24 @@ package case_study.models;
 
 public class Villa extends Facility {
     private String tieuChuan;
-    private double dienTichBeBoi;
+    private int dienTichBeBoi;
     private int soTang;
 
-    public Villa(String tenDichVu, double dienTichSuDung, double giaThue, int soLuongToiDa, String kieuThue, String tieuChuan, double dienTichBeBoi, int soTang) {
-        super(tenDichVu, dienTichSuDung, giaThue, soLuongToiDa, kieuThue);
+    public Villa(String maDichVu, String tenDichVu, int dienTichSuDung, double giaThue, int soLuongToiDa, String kieuThue, String tieuChuan, int dienTichBeBoi, int soTang) {
+        super(maDichVu, tenDichVu, dienTichSuDung, giaThue, soLuongToiDa, kieuThue);
         this.tieuChuan = tieuChuan;
         this.dienTichBeBoi = dienTichBeBoi;
         this.soTang = soTang;
     }
 
-    public Villa(String tenDichVu, double dienTichSuDung, double giaThue, int soLuongToiDa, String tieuChuan, double dienTichBeBoi, int soTang) {
+    public Villa(String maDichVu, String tenDichVu, int dienTichSuDung, double giaThue, int soLuongToiDa, String tieuChuan, int dienTichBeBoi, int soTang) {
         super(tenDichVu, dienTichSuDung, giaThue, soLuongToiDa);
         this.tieuChuan = tieuChuan;
         this.dienTichBeBoi = dienTichBeBoi;
         this.soTang = soTang;
     }
 
-    public Villa(String tieuChuan, double dienTichBeBoi, int soTang) {
+    public Villa(String tieuChuan, int dienTichBeBoi, int soTang) {
         this.tieuChuan = tieuChuan;
         this.dienTichBeBoi = dienTichBeBoi;
         this.soTang = soTang;
@@ -40,7 +40,7 @@ public class Villa extends Facility {
         return dienTichBeBoi;
     }
 
-    public void setDienTichBeBoi(double dienTichBeBoi) {
+    public void setDienTichBeBoi(int dienTichBeBoi) {
         this.dienTichBeBoi = dienTichBeBoi;
     }
 
@@ -53,11 +53,16 @@ public class Villa extends Facility {
     }
 
     @Override
-    public String toString() {
-        return "Villa{" + super.toString()+
+    public String toStringRead() {
+        return "Villa{" + super.toStringRead()+
                 "tieuChuan='" + tieuChuan + '\'' +
                 ", dienTichBeBoi=" + dienTichBeBoi +
                 ", soTang=" + soTang +
                 '}';
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+","+tieuChuan+","+dienTichBeBoi+","+soTang;
     }
 }

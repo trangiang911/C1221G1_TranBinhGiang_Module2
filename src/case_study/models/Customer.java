@@ -1,5 +1,7 @@
 package case_study.models;
 
+import java.util.Objects;
+
 public class Customer extends Person {
     private String loaiKhach;
     private String maKhachHang;
@@ -47,9 +49,29 @@ public class Customer extends Person {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return maKhachHang.equals(customer.maKhachHang);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(maKhachHang);
+    }
+
+    @Override
+    public String toStringRead() {
+        return "Customer{" + super.toStringRead()+
+                "loaiKhach='" + loaiKhach + '\'' +
+                ", maKhachHang='" + maKhachHang + '\'' +
+                ", diaChi='" + diaChi + '\'' +
+                '}';
+    }
+
+    @Override
     public String toString() {
-        return super.toString() +
-                "," + loaiKhach +
-                "," + maKhachHang;
+        return super.toString()+","+loaiKhach+","+maKhachHang+","+diaChi;
     }
 }

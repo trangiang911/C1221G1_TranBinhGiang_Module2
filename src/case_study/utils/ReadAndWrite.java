@@ -1,8 +1,12 @@
 package case_study.utils;
 
+import case_study.models.Facility;
+import case_study.models.Villa;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class ReadAndWrite {
     public static <T> void write(String filePath, List<T> tList, boolean append) {
@@ -22,7 +26,6 @@ public class ReadAndWrite {
             e.printStackTrace();
         }
     }
-
     public static List<String> read(String filePath) {
         List<String> stringList = new ArrayList<>();
         File file = new File(filePath);

@@ -1,6 +1,8 @@
 package case_study.services;
 
 import case_study.models.Employee;
+import case_study.utils.ReadAndWrite;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,9 +11,15 @@ public class EmployeeServiceImpl implements IEmployeeService {
     Scanner scanner = new Scanner(System.in);
     private static List<Employee> employeeList = new ArrayList<>();
 
-//    static {
-//
-//    }
+    static {
+        List<String> employeeList1=ReadAndWrite.read("src\\case_study\\data\\employee.csv");
+        String[] arr;
+        for (int i = 0; i <employeeList1.size() ; i++) {
+            arr=employeeList1.get(i).split(",");
+            Employee employee=new Employee(arr[0],arr[1],arr[2],arr[3],arr[4],arr[5],arr[6],arr[7],arr[8],Double.parseDouble(arr[9]));
+            employeeList.add(employee);
+        }
+    }
 
     @Override
     public void create() {
@@ -36,12 +44,13 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.println("Nhập lương của nhân viên");
         double luong = Double.parseDouble(scanner.nextLine());
         employeeList.add(new Employee(ten, birth, gioiTinh, cmnd, email, sdt, maNV, viTri, trinhDo, luong));
+        ReadAndWrite.write("src\\case_study\\data\\employee.csv",employeeList,false);
     }
 
     @Override
     public void display() {
         for (Employee element : employeeList) {
-            System.out.println(element);
+            System.out.println(element.toStringRead());
         }
     }
 

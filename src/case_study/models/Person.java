@@ -67,8 +67,7 @@ public abstract class Person {
     public void setsĐT(String sĐT) {
         this.sĐT = sĐT;
     }
-
-    @Override
+@Override
     public String toString() {
         return name +
                 "," + dateOfbirth +
@@ -76,5 +75,15 @@ public abstract class Person {
                 "," + identityCard +
                 "," + email +
                 "," + sĐT;
+    }
+
+    public String toStringRead() {
+        return
+                "name='" + name + '\'' +
+                ", dateOfbirth='" + dateOfbirth + '\'' +
+                ", gender='" + gender + '\'' +
+                ", identityCard='" + identityCard + '\'' +
+                ", email='" + email + '\'' +
+                ", sĐT='" + sĐT + '\'' ;
     }
 }
