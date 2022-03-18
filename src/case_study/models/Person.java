@@ -67,8 +67,8 @@ public abstract class Person {
     public void setsĐT(String sĐT) {
         this.sĐT = sĐT;
     }
-@Override
-    public String toString() {
+
+    public String toCSV() {
         return name +
                 "," + dateOfbirth +
                 "," + gender +
@@ -76,8 +76,8 @@ public abstract class Person {
                 "," + email +
                 "," + sĐT;
     }
-
-    public String toStringRead() {
+@Override
+    public String toString() {
         return
                 "name='" + name + '\'' +
                 ", dateOfbirth='" + dateOfbirth + '\'' +

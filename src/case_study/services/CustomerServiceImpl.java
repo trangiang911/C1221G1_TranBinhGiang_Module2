@@ -45,13 +45,13 @@ public class CustomerServiceImpl implements ICustomerService {
         System.out.println("Nhập địa chỉ của khách hàng");
         String daiChiKhach = scanner.nextLine();
         customerList.add(new Customer(nameKhach, birthKhach, genderKhach, cmndKhach, emailKhach, sdtKhach, loaiKhach, maKhach, daiChiKhach));
-        ReadAndWrite.write("src\\case_study\\data\\customer.csv", customerList, false);
+        ReadAndWrite.writeForPerson("src\\case_study\\data\\customer.csv", customerList, false);
     }
 
     @Override
     public void display() {
         for (Customer element : customerList) {
-            System.out.println(element.toStringRead());
+            System.out.println(element.toString());
         }
     }
 
@@ -130,11 +130,6 @@ public class CustomerServiceImpl implements ICustomerService {
                 choice1 = scanner.nextLine();
             } while ("yes".equals(choice1));
         }
-    }
-
-    @Override
-    public void delete() {
-
     }
 
     @Override

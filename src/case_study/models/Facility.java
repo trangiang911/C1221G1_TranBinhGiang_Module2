@@ -3,7 +3,7 @@ package case_study.models;
 import java.util.Objects;
 
 public abstract class Facility {
-    private String maDichVu;
+    protected String maDichVu;
     private String tenDichVu;
     private int dienTichSuDung;
     private double giaThue;
@@ -90,7 +90,8 @@ public abstract class Facility {
         return Objects.hash(maDichVu);
     }
 
-    public String toStringRead() {
+    @Override
+    public String toString() {
         return
                 "maDichVu='" + maDichVu + '\'' +
                         ", tenDichVu='" + tenDichVu + '\'' +
@@ -100,8 +101,8 @@ public abstract class Facility {
                         ", kieuThue='" + kieuThue + '\'';
     }
 
-    @Override
-    public String toString() {
+
+    public String toCSV() {
         return maDichVu +
                 "," + tenDichVu +
                 "," + dienTichSuDung +

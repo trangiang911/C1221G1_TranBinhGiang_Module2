@@ -41,15 +41,16 @@ public class House extends Facility {
     }
 
     @Override
-    public String toStringRead() {
-        return "House{" + super.toStringRead()+
+    public String toString() {
+        return "House{" + super.toString()+
                 "tieuChuan='" + tieuChuan + '\'' +
                 ", soTang=" + soTang +
                 '}';
     }
 
     @Override
-    public String toString() {
-        return super.toString()+","+tieuChuan+","+soTang;
+    public String toCSV() {
+        return super.toCSV()+","+tieuChuan+","+soTang;
     }
+
 }

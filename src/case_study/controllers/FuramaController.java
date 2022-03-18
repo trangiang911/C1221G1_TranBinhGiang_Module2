@@ -98,7 +98,7 @@ public class FuramaController {
                         System.out.println("Lựa chọn phải là số nguyên dương,mời nhập lại");
                         str3=scanner.nextLine();
                     }
-                    int choice3 = Integer.parseInt(scanner.nextLine());
+                    int choice3 = Integer.parseInt(str3);
                     switch (choice3) {
                         case 1:
                             facilityService.display();

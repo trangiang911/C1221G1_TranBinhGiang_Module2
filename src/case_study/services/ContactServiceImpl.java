@@ -11,13 +11,5 @@ public class ContactServiceImpl implements IContactService{
 
     }
 
-    @Override
-    public void edit() {
 
-    }
-
-    @Override
-    public void delete() {
-
-    }
 }

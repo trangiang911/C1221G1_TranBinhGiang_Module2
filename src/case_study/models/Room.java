@@ -33,14 +33,14 @@ public class Room extends Facility {
     }
 
     @Override
-    public String toStringRead() {
-        return "Room{" + super.toStringRead()+
+    public String toString() {
+        return "Room{" + super.toString()+
                 "dinhVuFree='" + dinhVuFree + '\'' +
                 '}';
     }
 
     @Override
-    public String toString() {
-        return super.toString()+","+dinhVuFree;
+    public String toCSV() {
+        return super.toCSV()+","+dinhVuFree;
     }
 }

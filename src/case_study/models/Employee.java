@@ -59,8 +59,8 @@ public class Employee extends Person{
     }
 
     @Override
-    public String toStringRead() {
-        return "Employee{" + super.toStringRead()+
+    public String toString() {
+        return "Employee{" + super.toString()+
                 "maNV='" + maNV + '\'' +
                 ", viTri='" + viTri + '\'' +
                 ", trinhDo='" + trinhDo + '\'' +
@@ -69,7 +69,7 @@ public class Employee extends Person{
     }
 
     @Override
-    public String toString() {
-        return super.toString()+","+maNV+","+viTri+","+trinhDo+","+luong;
+    public String toCSV() {
+        return super.toCSV()+","+maNV+","+viTri+","+trinhDo+","+luong;
     }
 }

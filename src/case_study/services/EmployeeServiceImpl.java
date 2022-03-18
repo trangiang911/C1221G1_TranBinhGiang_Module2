@@ -6,6 +6,7 @@ import case_study.utils.ReadAndWrite;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class EmployeeServiceImpl implements IEmployeeService {
     Scanner scanner = new Scanner(System.in);
@@ -48,13 +49,13 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.println("Nhập lương của nhân viên");
         double luong = Double.parseDouble(scanner.nextLine());
         employeeList.add(new Employee(ten, birth, gioiTinh, cmnd, email, sdt, maNV, viTri, trinhDo, luong));
-        ReadAndWrite.write("src\\case_study\\data\\employee.csv", employeeList, false);
+        ReadAndWrite.writeForPerson("src\\case_study\\data\\employee.csv", employeeList, false);
     }
 
     @Override
     public void display() {
         for (Employee element : employeeList) {
-            System.out.println(element.toStringRead());
+            System.out.println(element.toString());
         }
     }
 
@@ -79,7 +80,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
                             "9. Chỉnh sửa trình độ nhân viên\n" +
                             "10. Chỉnh sửa lương nhân viên");
                     System.out.println("Nhập Lựa chọn");
-                    int choice = Integer.parseInt(scanner.nextLine());
+                    String str=scanner.nextLine();
+                    while (!Pattern.matches("^[0-9]{1}$",str)){
+                        System.out.println("Lựa chọn phải là số (1-10)");
+                        str=scanner.nextLine();
+                    }
+                    int choice = Integer.parseInt(str);
                     switch (choice) {
                         case 1:
                             System.out.println("Nhập tên mới của nhân viên");
@@ -144,23 +150,6 @@ public class EmployeeServiceImpl implements IEmployeeService {
     }
 
     @Override
-    public void delete() {
-        display();
-        System.out.println("Nhập mã nhân vân cần xoá");
-        String maDel = scanner.nextLine();
-        for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getMaNV().equals(maDel)) {
-                System.out.println("Bạn có chắc xoá nhân viên này");
-                String choice = scanner.nextLine();
-                if ("yes".equals(choice)) {
-                    employeeList.remove(i);
-                    System.out.println("xoá thành công");
-                }
-            }
-        }
-    }
-
-    @Override
     public String trinhDo() {
         List<String> stringList = new ArrayList<>();
         stringList.add("Trung cấp");
@@ -173,7 +162,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 "3. Đại học\n" +
                 "4. Sau đại học");
         System.out.println("Nhập lựa chọn");
-        int choice = Integer.parseInt(scanner.nextLine());
+        String str=scanner.nextLine();
+        while (!Pattern.matches("^[0-9]{1}$",str)){
+            System.out.println("Ko đúng mời nhập lại");
+            str=scanner.nextLine();
+        }
+        int choice = Integer.parseInt(str);
         switch (choice) {
             case 1:
                 return stringList.get(0);
@@ -207,7 +201,12 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 "5. Quản lý\n" +
                 "6. Giám đốc");
         System.out.println("Nhập lựa chọn");
-        int choice = Integer.parseInt(scanner.nextLine());
+        String str=scanner.nextLine();
+        while (!Pattern.matches("^[0-9]{1}$",str)){
+            System.out.println("Lựa chọn k hợp lệ mời nhập lại");
+            str=scanner.nextLine();
+        }
+        int choice = Integer.parseInt(str);
         switch (choice) {
             case 1:
                 return stringList.get(0);

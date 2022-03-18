@@ -26,18 +26,13 @@ N	java:S106}"9Replace this use of System.out or System.err by a logger.(ôå‘‘
 T	java:S106‚"9Replace this use of System.out or System.err by a logger.(½œÀøÿÿÿÿ
 T	java:S106‡"9Replace this use of System.out or System.err by a logger.(ƒšŸ‡þÿÿÿÿ
 T	java:S106Œ"9Replace this use of System.out or System.err by a logger.(„‡Ÿýÿÿÿÿ
-T	java:S106•"9Replace this use of System.out or System.err by a logger.(Ø‡­ñøÿÿÿÿ
-E
-java:S5413œ")Verify that "remove()" is used correctly.(§¿”ùÿÿÿÿ
-T	java:S106™"9Replace this use of System.out or System.err by a logger.(‰Û„øÿÿÿÿ
-O	java:S106"9Replace this use of System.out or System.err by a logger.(ÙØÐæ
-O	java:S106ª"9Replace this use of System.out or System.err by a logger.(ï¿Ç†
-T	java:S106«"9Replace this use of System.out or System.err by a logger.(ê‰¹þøÿÿÿÿ
-O	java:S106¯"9Replace this use of System.out or System.err by a logger.(–¨°‡
-O	java:S106»"9Replace this use of System.out or System.err by a logger.(É²öâ
-N	java:S106Ê"9Replace this use of System.out or System.err by a logger.(èãR
-T	java:S106Ë"9Replace this use of System.out or System.err by a logger.(ä½âÁûÿÿÿÿ
-O	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(–¨°‡
-T	java:S106á"9Replace this use of System.out or System.err by a logger.(“ÈÌåýÿÿÿÿ
+O	java:S106™"9Replace this use of System.out or System.err by a logger.(ï¿Ç†
+T	java:S106š"9Replace this use of System.out or System.err by a logger.(ê‰¹þøÿÿÿÿ
+O	java:S106ž"9Replace this use of System.out or System.err by a logger.(–¨°‡
+O	java:S106ª"9Replace this use of System.out or System.err by a logger.(É²öâ
+N	java:S106¹"9Replace this use of System.out or System.err by a logger.(èãR
+T	java:S106º"9Replace this use of System.out or System.err by a logger.(ä½âÁûÿÿÿÿ
+O	java:S106À"9Replace this use of System.out or System.err by a logger.(–¨°‡
+T	java:S106Ð"9Replace this use of System.out or System.err by a logger.(“ÈÌåýÿÿÿÿ
 T
 java:S1155">Use isEmpty() to check whether the collection is empty or not.(¶ú½¯

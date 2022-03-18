@@ -62,8 +62,8 @@ public class Customer extends Person {
     }
 
     @Override
-    public String toStringRead() {
-        return "Customer{" + super.toStringRead()+
+    public String toString() {
+        return "Customer{" + super.toString()+
                 "loaiKhach='" + loaiKhach + '\'' +
                 ", maKhachHang='" + maKhachHang + '\'' +
                 ", diaChi='" + diaChi + '\'' +
@@ -71,7 +71,7 @@ public class Customer extends Person {
     }
 
     @Override
-    public String toString() {
-        return super.toString()+","+loaiKhach+","+maKhachHang+","+diaChi;
+    public String toCSV() {
+        return super.toCSV()+","+loaiKhach+","+maKhachHang+","+diaChi;
     }
 }

@@ -1,7 +1,10 @@
 
-F
-java:S2160"+Override the "equals" method in this class.(Ö­ãåúÿÿÿÿ
+M
+java:S2160"+Override the "equals" method in this class.(Ö­ãåúÿÿÿÿ8úþ€×ù/
 E
-java:S1172"/Remove this unused method parameter "maDichVu".(ÑÇ™•
-V	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(×’ÿ¾
-V	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(ÑÇ™•
+java:S1172"/Remove this unused method parameter "maDichVu".(ÑÇ™•
+K
+java:S1128".Remove this unused import 'java.util.Objects'.(¼¸õ›8‰ÿ€×ù/
+V	java:S107
+"AConstructor has 9 parameters, which is greater than 7 authorized.(×’ÿ¾
+V	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(ÑÇ™•

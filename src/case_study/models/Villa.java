@@ -1,5 +1,7 @@
 package case_study.models;
 
+import java.util.Objects;
+
 public class Villa extends Facility {
     private String tieuChuan;
     private int dienTichBeBoi;
@@ -26,6 +28,7 @@ public class Villa extends Facility {
     }
 
     public Villa() {
+        super();
     }
 
     public String getTieuChuan() {
@@ -53,8 +56,8 @@ public class Villa extends Facility {
     }
 
     @Override
-    public String toStringRead() {
-        return "Villa{" + super.toStringRead()+
+    public String toString() {
+        return "Villa{" + super.toString()+
                 "tieuChuan='" + tieuChuan + '\'' +
                 ", dienTichBeBoi=" + dienTichBeBoi +
                 ", soTang=" + soTang +
@@ -62,7 +65,7 @@ public class Villa extends Facility {
     }
 
     @Override
-    public String toString() {
-        return super.toString()+","+tieuChuan+","+dienTichBeBoi+","+soTang;
+    public String toCSV() {
+        return super.toCSV()+","+tieuChuan+","+dienTichBeBoi+","+soTang;
     }
 }

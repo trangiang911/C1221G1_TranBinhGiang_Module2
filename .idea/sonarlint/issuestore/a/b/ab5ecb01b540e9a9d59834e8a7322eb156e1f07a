@@ -1,8 +1,4 @@
 
-˜
-java:S1186Ş"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ô¹íä
-
-java:S1186ã"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÒÑøïşÿÿÿÿ
 ?
 java:S1481+")Remove this unused "room" local variable.(Ö´Îà
 i
@@ -91,10 +87,10 @@ T	java:S106Ó"9Replace this use of System.out or System.err by a logger.(šû—Óø
 T	java:S106Õ"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ
 T	java:S106Ö"9Replace this use of System.out or System.err by a logger.(²Êú•úÿÿÿÿ
 T	java:S106Ø"9Replace this use of System.out or System.err by a logger.(šû—Óøÿÿÿÿ
-T	java:S106î"9Replace this use of System.out or System.err by a logger.(êŞçùÿÿÿÿ
-O	java:S106ò"9Replace this use of System.out or System.err by a logger.(–¨°‡
-[	java:S106ş"9Replace this use of System.out or System.err by a logger.(ô¸èöúÿÿÿÿ8”Â¿¸ù/
-[	java:S106‹"9Replace this use of System.out or System.err by a logger.(×´İüÿÿÿÿ8•Â¿¸ù/
+T	java:S106ä"9Replace this use of System.out or System.err by a logger.(êŞçùÿÿÿÿ
+O	java:S106è"9Replace this use of System.out or System.err by a logger.(–¨°‡
+[	java:S106ô"9Replace this use of System.out or System.err by a logger.(ô¸èöúÿÿÿÿ8”Â¿¸ù/
+[	java:S106"9Replace this use of System.out or System.err by a logger.(×´İüÿÿÿÿ8•Â¿¸ù/
 |
 java:S1192Z"aDefine a constant instead of duplicating this literal "ko há»£p lá»‡ má»i nháº­p láº¡i" 4 times.(Âªª–ıÿÿÿÿ
 |
