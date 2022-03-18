@@ -15,7 +15,7 @@ public class FuramaController {
 
     public void displayMainMenu() {
         System.out.println("Main Menu");
-        int choice = -1;
+        int choice;
         do {
             System.out.println("1.\tEmployee Management\n" +
                     "2.\tCustomer Management\n" +
@@ -25,7 +25,7 @@ public class FuramaController {
                     "6.\tExit");
             System.out.println("Nhập lựa chọn");
             String str=scanner.nextLine();
-            while (!Pattern.matches("^[0-9]{1}",str)){
+            while (!Pattern.matches("^[0-9]",str)){
                 System.out.println("Lựa chọn phải là số, mời nhập lại");
                 str=scanner.nextLine();
             }
@@ -38,7 +38,7 @@ public class FuramaController {
                             "4.\tReturn main menu\n");
                     System.out.println("Nhập lựa chọn");
                     String str1=scanner.nextLine();
-                    while (!Pattern.matches("^[0-9]{1}$",str1)){
+                    while (!Pattern.matches("^[0-9]$",str1)){
                         System.out.println("Lựa chọn phải là số nguyên, mời nhập lại");
                         str1=scanner.nextLine();
                     }
@@ -66,7 +66,7 @@ public class FuramaController {
                             "4.\tReturn main menu\n");
                     System.out.println("Nhập lựa chọn");
                     String str2=scanner.nextLine();
-                    while (!Pattern.matches("^[0-9]{1}$",str2)){
+                    while (!Pattern.matches("^[0-9]$",str2)){
                         System.out.println("Lựa chọn phải là số nguyên dương, mời nhập lại");
                         str2=scanner.nextLine();
                     }
@@ -94,7 +94,7 @@ public class FuramaController {
                             "4\tReturn main menu\n");
                     System.out.println("Nhập lựa chọn");
                     String str3=scanner.nextLine();
-                    while (!Pattern.matches("^[0-9]{1}$",str3)){
+                    while (!Pattern.matches("^[0-9]$",str3)){
                         System.out.println("Lựa chọn phải là số nguyên dương,mời nhập lại");
                         str3=scanner.nextLine();
                     }

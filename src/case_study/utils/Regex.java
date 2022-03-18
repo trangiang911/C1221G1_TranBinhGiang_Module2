@@ -28,7 +28,7 @@ public class Regex {
     }
 
     public static boolean checkRegexTenDichVu(String str) {
-        if (Pattern.matches("^[A-Z]{1}[a-z_[\\s]]+$", str)) {
+        if (Pattern.matches("^[A-Z]{1}[a-z{L}_[0-9][\\s]]+$", str)) {
             return true;
         } else {
             return false;
@@ -84,7 +84,7 @@ public class Regex {
     }
 
     public static boolean checkMail(String string) {
-        if (Pattern.matches("^[a-z_0-9_[^\\w]]{4,}@[a-z]{4,}\\.[a-z]{2,}", string)) {
+        if (Pattern.matches("^[a-z_0-9_[^\\w]]{2,}@[a-z]{4,}\\.[a-z]{3,}", string)) {
             return true;
         } else {
             return false;

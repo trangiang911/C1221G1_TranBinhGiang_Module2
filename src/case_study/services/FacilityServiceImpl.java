@@ -8,13 +8,14 @@ import case_study.utils.ReadAndWrite;
 import case_study.utils.Regex;
 
 import java.util.*;
+import java.util.regex.Pattern;
 
 public class FacilityServiceImpl implements IFacilityService {
     Scanner scanner = new Scanner(System.in);
-    private static List<Villa> villaList = new ArrayList<>();
-    private static List<House> housesList = new ArrayList<>();
-    private static List<Room> roomList = new ArrayList<>();
-    private static Map<Facility, Integer> listFacility = new LinkedHashMap<>();
+    private static final List<Villa> VILLAS = new ArrayList<>();
+    private static final List<House> HOUSE_LIST = new ArrayList<>();
+    private static final List<Room> ROOM_LIST = new ArrayList<>();
+    private static final Map<Facility, Integer> listFacility = new LinkedHashMap<>();
 
     static {
         List<String> villaList1 = ReadAndWrite.read("src\\case_study\\data\\villa.csv");
@@ -23,24 +24,25 @@ public class FacilityServiceImpl implements IFacilityService {
         String[] arr1;
         String[] arr2;
         String[] arr3;
-        for (int i = 0; i < villaList1.size(); i++) {
-            if (!villaList1.get(i).isEmpty()) {
-                arr1 = villaList1.get(i).split(",");
+        for (String item : villaList1) {
+            if (!item.isEmpty()) {
+                arr1 = item.split(",");
                 Villa villa = new Villa(arr1[0], arr1[1], Integer.parseInt(arr1[2]), Double.parseDouble(arr1[3]), Integer.parseInt(arr1[4]), arr1[5], arr1[6], Integer.parseInt(arr1[7]), Integer.parseInt(arr1[8]));
-                villaList.add(villa);
+                VILLAS.add(villa);
             }
         }
-        for (int i = 0; i < houseList1.size(); i++) {
-            if (!houseList1.get(i).isEmpty()) {
-                arr2 = houseList1.get(i).split(",");
+        for (String value : houseList1) {
+            if (!value.isEmpty()) {
+                arr2 = value.split(",");
                 House house = new House(arr2[0], arr2[1], Integer.parseInt(arr2[2]), Double.parseDouble(arr2[3]), Integer.parseInt(arr2[4]), arr2[5], arr2[6], Integer.parseInt(arr2[7]));
-                housesList.add(house);
+                HOUSE_LIST.add(house);
             }
         }
-        for (int i = 0; i < roomList1.size(); i++) {
-            if (!roomList1.get(i).isEmpty()) {
-                arr3 = roomList1.get(i).split(",");
+        for (String s : roomList1) {
+            if (!s.isEmpty()) {
+                arr3 = s.split(",");
                 Room room = new Room(arr3[0], arr3[1], Integer.parseInt(arr3[2]), Double.parseDouble(arr3[3]), Integer.parseInt(arr3[4]), arr3[5], arr3[5]);
+                ROOM_LIST.add(room);
             }
         }
     }
@@ -53,7 +55,12 @@ public class FacilityServiceImpl implements IFacilityService {
                 "3. Add new Room\n" +
                 "4. Back to Menu");
         System.out.println("Nhập lựa chọn");
-        int choice = Integer.parseInt(scanner.nextLine());
+        String str=scanner.nextLine();
+        while (!Pattern.matches("^[0-9]$",str)){
+            System.out.println("Lựa chọn k hợp lệ mời nhập lại");
+            str=scanner.nextLine();
+        }
+        int choice = Integer.parseInt(str);
         switch (choice) {
             case 1:
                 System.out.println("Nhập mã dịch vụ (SVVL-YYYY)");
@@ -158,18 +165,14 @@ public class FacilityServiceImpl implements IFacilityService {
                 }
                 Villa villa = new Villa(maDichVu, tenDichVu, dienTich, giaThue, sLToiDa, kieuThue, tieuChuan, dienTichBeBoi, soTang);
                 listFacility.put(villa, 0);
-                int cont = 0;
-                for (int i = 0; i < villaList.size(); i++) {
-                    if (villa.equals(villaList.get(i))) {
-                        villaList.remove(i);
-                        villaList.add(i, villa);
-                        cont++;
+                for (int i = 0; i < VILLAS.size(); i++) {
+                    if (villa.equals(VILLAS.get(i))) {
+                        VILLAS.remove(i);
+                        VILLAS.add(i, villa);
+                        break;
                     }
                 }
-                if (cont == 0) {
-                    villaList.add(villa);
-                }
-                ReadAndWrite.writeForFacility("src\\case_study\\data\\villa.csv", villaList, false);
+                ReadAndWrite.writeForFacility("src\\case_study\\data\\villa.csv", VILLAS, false);
                 break;
             case 2:
                 System.out.println("Nhập mã dịch vụ (SVHO-YYYY)");
@@ -252,20 +255,21 @@ public class FacilityServiceImpl implements IFacilityService {
                     str9 = scanner.nextLine();
                     while (!Regex.checkSoTang(str9)) {
                         System.out.println("Số tần ko hợp lệ mời nhập lại");
-                        str5 = scanner.nextLine();
+                        str9 = scanner.nextLine();
                     }
                     soTangHouse = Integer.parseInt(str9);
                 }
                 House house = new House(maDichVuHouse, tenDichVuHouse, dienTichHouse, giaThueHouse, sLToiDaHouse, kieuThueHouse, tieuChuanHouse, soTangHouse);
                 listFacility.put(house, 0);
-                for (int i = 0; i < housesList.size() ; i++) {
-                    if(housesList.get(i).equals(house)){
-                        housesList.remove(i);
-                        housesList.add(i,house);
+                for (int i = 0; i < HOUSE_LIST.size() ; i++) {
+                    if(HOUSE_LIST.get(i).equals(house)){
+                        HOUSE_LIST.remove(i);
+                        HOUSE_LIST.add(i,house);
+                        break;
                     }
                 }
-                housesList.add(house);
-                ReadAndWrite.writeForFacility("src\\case_study\\data\\house.csv", housesList, false);
+                HOUSE_LIST.add(house);
+                ReadAndWrite.writeForFacility("src\\case_study\\data\\house.csv", HOUSE_LIST, false);
                 break;
             case 3:
                 System.out.println("Nhập mã dịch vụ (SVRO-YYYY)");
@@ -294,7 +298,7 @@ public class FacilityServiceImpl implements IFacilityService {
                         System.out.println("Diện tích sử dụng ko hợp lệ");
                         str10 = scanner.nextLine();
                     }
-                    dienTichHouse = Integer.parseInt(str10);
+                    dienTichRoom = Integer.parseInt(str10);
                 }
                 System.out.println("Nhập giá thuê");
                 String str11 = scanner.nextLine();
@@ -334,14 +338,15 @@ public class FacilityServiceImpl implements IFacilityService {
                 String dichVuFree = scanner.nextLine();
                 Room room = new Room(maDichVuRoom, tenDichVuRoom, dienTichRoom, giaThueRoom, sLToiDaRoom, kieuThueRoom, dichVuFree);
                 listFacility.put(room, 0);
-                for (int i = 0; i <roomList.size() ; i++) {
-                    if(roomList.get(i).equals(room)){
-                        roomList.remove(i);
-                        roomList.add(i,room);
+                for (int i = 0; i < ROOM_LIST.size() ; i++) {
+                    if(ROOM_LIST.get(i).equals(room)){
+                        ROOM_LIST.remove(i);
+                        ROOM_LIST.add(i,room);
+                        break;
                     }
                 }
-                roomList.add(room);
-                ReadAndWrite.writeForFacility("src\\case_study\\data\\room.csv", roomList, false);
+                ROOM_LIST.add(room);
+                ReadAndWrite.writeForFacility("src\\case_study\\data\\room.csv", ROOM_LIST, false);
                 break;
         }
     }
@@ -351,18 +356,17 @@ public class FacilityServiceImpl implements IFacilityService {
         ReadAndWrite.read("src\\case_study\\data\\villa.csv");
         ReadAndWrite.read("src\\case_study\\data\\house.csv");
         ReadAndWrite.read("src\\case_study\\data\\room.csv");
-        System.out.println("====VILLA====");
-        for (Villa element : villaList) {
+        System.out.println("\n====VILLA====");
+        for (Villa element : VILLAS) {
             System.out.println(element.toString());
         }
-        System.out.println("");
-        System.out.println("====HOUSE====");
-        for (House element : housesList) {
+        System.out.println("\n====HOUSE====");
+        for (House element : HOUSE_LIST) {
             System.out.println(element.toString());
         }
-        System.out.println("");
-        System.out.println("====ROOM====");
-        for (Room element : roomList) {
+
+        System.out.println("\n====ROOM====");
+        for (Room element : ROOM_LIST) {
             System.out.println(element.toString());
         }
     }
@@ -404,7 +408,7 @@ public class FacilityServiceImpl implements IFacilityService {
         ReadAndWrite.read("src\\case_study\\data\\room.csv");
         for (Map.Entry<Facility, Integer> entry : listFacility.entrySet()) {
             if (entry.getValue() >= 5) {
-                System.out.println(entry.getKey() + " - " + entry.getValue());
+                System.out.println(entry.getKey() + " --- " + entry.getValue());
             }
         }
     }

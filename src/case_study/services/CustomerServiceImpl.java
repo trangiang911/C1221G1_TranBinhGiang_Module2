@@ -2,6 +2,7 @@ package case_study.services;
 
 import case_study.models.Customer;
 import case_study.utils.ReadAndWrite;
+import case_study.utils.Regex;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -10,16 +11,16 @@ import java.util.Scanner;
 
 public class CustomerServiceImpl implements ICustomerService {
     Scanner scanner = new Scanner(System.in);
-    private static List<Customer> customerList = new LinkedList<>();
+    private static final List<Customer> CUSTOMER_LIST = new LinkedList<>();
 
     static {
         List<String> stringList = ReadAndWrite.read("src\\case_study\\data\\customer.csv");
         String[] arr;
-        for (int i = 0; i < stringList.size(); i++) {
-            if (!stringList.get(i).isEmpty()) {
-                arr = stringList.get(i).split(",");
+        for (String s : stringList) {
+            if (!s.isEmpty()) {
+                arr = s.split(",");
                 Customer customer = new Customer(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
-                customerList.add(customer);
+                CUSTOMER_LIST.add(customer);
             }
         }
     }
@@ -28,8 +29,16 @@ public class CustomerServiceImpl implements ICustomerService {
     public void create() {
         System.out.println("Nhập tên khách hàng");
         String nameKhach = scanner.nextLine();
+        while (!Regex.checkTen(nameKhach)){
+            System.out.println("Tên khách k đúng format, mời nhập lại");
+            nameKhach=scanner.nextLine();
+        }
         System.out.println("Nhập ngày tháng năm sinh khách hàng");
         String birthKhach = scanner.nextLine();
+        while (!Regex.checkNgaySinh(birthKhach)){
+            System.out.println("Ngày sinh k đúng mời nhập lại");
+            birthKhach=scanner.nextLine();
+        }
         System.out.println("Nhập giới tính khách hàng");
         String genderKhach = scanner.nextLine();
         System.out.println("Nhập cmnd (hoặc căn cước) của khách");
@@ -44,13 +53,13 @@ public class CustomerServiceImpl implements ICustomerService {
         String maKhach = scanner.nextLine();
         System.out.println("Nhập địa chỉ của khách hàng");
         String daiChiKhach = scanner.nextLine();
-        customerList.add(new Customer(nameKhach, birthKhach, genderKhach, cmndKhach, emailKhach, sdtKhach, loaiKhach, maKhach, daiChiKhach));
-        ReadAndWrite.writeForPerson("src\\case_study\\data\\customer.csv", customerList, false);
+        CUSTOMER_LIST.add(new Customer(nameKhach, birthKhach, genderKhach, cmndKhach, emailKhach, sdtKhach, loaiKhach, maKhach, daiChiKhach));
+        ReadAndWrite.writeForPerson("src\\case_study\\data\\customer.csv", CUSTOMER_LIST, false);
     }
 
     @Override
     public void display() {
-        for (Customer element : customerList) {
+        for (Customer element : CUSTOMER_LIST) {
             System.out.println(element.toString());
         }
     }
@@ -59,10 +68,10 @@ public class CustomerServiceImpl implements ICustomerService {
     public void edit() {
         System.out.println("Nhập mã khách hàng cần chỉnh sửa");
         String maKhachEdit = scanner.nextLine();
-        for (int i = 0; i < customerList.size(); i++) {
-            String choice1 = null;
+        for (Customer customer : CUSTOMER_LIST) {
+            String choice1;
             do {
-                if (customerList.get(i).getMaKhachHang().equals(maKhachEdit)) {
+                if (customer.getMaKhachHang().equals(maKhachEdit)) {
                     System.out.println("Lựa chọn thông tin cần chỉnh sủa");
                     System.out.println("1. Chỉnh sửa tên\n" +
                             "2. Chỉnh sửa ngày tháng năm sinh\n" +
@@ -75,56 +84,65 @@ public class CustomerServiceImpl implements ICustomerService {
                             "9. Chỉnh sửa địa chỉ khách hàng\n");
                     System.out.println("Nhạp lựa chòn");
                     int choice = Integer.parseInt(scanner.nextLine());
-                    switch (choice) {
-                        case 1:
-                            System.out.println("Nhập tên mới của khách hàng");
-                            String nameEdit = scanner.nextLine();
-                            customerList.get(i).setName(nameEdit);
-                            break;
-                        case 2:
-                            System.out.println("Nhập ngày tháng năm sinh mới của khách hàng");
-                            String birthEdit = scanner.nextLine();
-                            customerList.get(i).setDateOfbirth(birthEdit);
-                            break;
-                        case 3:
-                            System.out.println("Nhập giới tính mới của khách");
-                            String genderEdit = scanner.nextLine();
-                            customerList.get(i).setGender(genderEdit);
-                            break;
-                        case 4:
-                            System.out.println("Nhập số cmnd (căn cước) mới của khách");
-                            String cmndEdit = scanner.nextLine();
-                            customerList.get(i).setIdentityCard(cmndEdit);
-                            break;
-                        case 5:
-                            System.out.println("Nhập mã khách hàng mới của khách");
-                            String maKhachHangEdit = scanner.nextLine();
-                            customerList.get(i).setMaKhachHang(maKhachHangEdit);
-                            break;
-                        case 6:
-                            System.out.println("Nhập email mới của khách");
-                            String emailEdit = scanner.nextLine();
-                            customerList.get(i).setEmail(emailEdit);
-                            break;
-                        case 7:
-                            System.out.println("Nhập sđt mới của khách");
-                            String sđtEdit = scanner.nextLine();
-                            customerList.get(i).setsĐT(sđtEdit);
-                            break;
-                        case 8:
-                            System.out.println("Chọn loại khách hàng mới cho khách");
-                            String loaiKhachEdit = loaiCustomer();
-                            customerList.get(i).setLoaiKhach(loaiKhachEdit);
-                            break;
-                        case 9:
-                            System.out.println("Nhập địa chỉ mới của khách");
-                            String diaChiEdit = scanner.nextLine();
-                            customerList.get(i).setDiaChi(diaChiEdit);
-                            break;
-                        default:
-                            System.out.println("Lựa chọn ko hợp lệ");
-                            break;
-                    }
+                    boolean flag;
+                    do {
+                        flag = false;
+                        try {
+                            switch (choice) {
+                                case 1:
+                                    System.out.println("Nhập tên mới của khách hàng");
+                                    String nameEdit = scanner.nextLine();
+                                    customer.setName(nameEdit);
+                                    break;
+                                case 2:
+                                    System.out.println("Nhập ngày tháng năm sinh mới của khách hàng");
+                                    String birthEdit = scanner.nextLine();
+                                    customer.setDateOfbirth(birthEdit);
+                                    break;
+                                case 3:
+                                    System.out.println("Nhập giới tính mới của khách");
+                                    String genderEdit = scanner.nextLine();
+                                    customer.setGender(genderEdit);
+                                    break;
+                                case 4:
+                                    System.out.println("Nhập số cmnd (căn cước) mới của khách");
+                                    String cmndEdit = scanner.nextLine();
+                                    customer.setIdentityCard(cmndEdit);
+                                    break;
+                                case 5:
+                                    System.out.println("Nhập mã khách hàng mới của khách");
+                                    String maKhachHangEdit = scanner.nextLine();
+                                    customer.setMaKhachHang(maKhachHangEdit);
+                                    break;
+                                case 6:
+                                    System.out.println("Nhập email mới của khách");
+                                    String emailEdit = scanner.nextLine();
+                                    customer.setEmail(emailEdit);
+                                    break;
+                                case 7:
+                                    System.out.println("Nhập sđt mới của khách");
+                                    String sdtEdit = scanner.nextLine();
+                                    customer.setsĐT(sdtEdit);
+                                    break;
+                                case 8:
+                                    System.out.println("Chọn loại khách hàng mới cho khách");
+                                    String loaiKhachEdit = loaiCustomer();
+                                    customer.setLoaiKhach(loaiKhachEdit);
+                                    break;
+                                case 9:
+                                    System.out.println("Nhập địa chỉ mới của khách");
+                                    String diaChiEdit = scanner.nextLine();
+                                    customer.setDiaChi(diaChiEdit);
+                                    break;
+                                default:
+                                    System.out.println("Lựa chọn ko hợp lệ");
+                                    break;
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            flag = true;
+                        }
+                    } while (flag);
                 }
                 System.out.println("Bạn có muốn tiếp tục chỉnh sửa khách hàng này");
                 choice1 = scanner.nextLine();
