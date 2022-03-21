@@ -9,8 +9,6 @@ import java.util.*;
 public class BookingServiceImpl implements IBookingService{
     Scanner scanner=new Scanner(System.in);
     private static final Set<Booking> bookingSet=new TreeSet<>(new SapXep());
-    static List<Customer> customerList=new ArrayList<>();
-    static Map<Facility,Integer> facilityIntegerMap=new LinkedHashMap<>();
     CustomerServiceImpl customerService=new CustomerServiceImpl();
     FacilityServiceImpl facilityService=new FacilityServiceImpl();
 //    static {
