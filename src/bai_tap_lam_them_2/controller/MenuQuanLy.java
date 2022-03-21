@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class MenuQuanLy {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int choice = -1;
+        int choice;
         ServiceXe serviceXe = new ServiceXe();
         do {
             System.out.println("Menu quản lý");

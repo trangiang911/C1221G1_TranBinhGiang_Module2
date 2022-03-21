@@ -12,10 +12,10 @@ import java.util.regex.Pattern;
 
 public class FacilityServiceImpl implements IFacilityService {
     Scanner scanner = new Scanner(System.in);
-    private static final List<Villa> VILLAS = new ArrayList<>();
-    private static final List<House> HOUSE_LIST = new ArrayList<>();
-    private static final List<Room> ROOM_LIST = new ArrayList<>();
-    private static final Map<Facility, Integer> listFacility = new LinkedHashMap<>();
+     static final List<Villa> VILLAS = new ArrayList<>();
+     static final List<House> HOUSE_LIST = new ArrayList<>();
+     static final List<Room> ROOM_LIST = new ArrayList<>();
+     static final Map<Facility, Integer> LIST_FACILITY = new LinkedHashMap<>();
 
     static {
         List<String> villaList1 = ReadAndWrite.read("src\\case_study\\data\\villa.csv");
@@ -164,7 +164,7 @@ public class FacilityServiceImpl implements IFacilityService {
                     soTang = Integer.parseInt(str5);
                 }
                 Villa villa = new Villa(maDichVu, tenDichVu, dienTich, giaThue, sLToiDa, kieuThue, tieuChuan, dienTichBeBoi, soTang);
-                listFacility.put(villa, 0);
+                LIST_FACILITY.put(villa, 0);
                 for (int i = 0; i < VILLAS.size(); i++) {
                     if (villa.equals(VILLAS.get(i))) {
                         VILLAS.remove(i);
@@ -260,7 +260,7 @@ public class FacilityServiceImpl implements IFacilityService {
                     soTangHouse = Integer.parseInt(str9);
                 }
                 House house = new House(maDichVuHouse, tenDichVuHouse, dienTichHouse, giaThueHouse, sLToiDaHouse, kieuThueHouse, tieuChuanHouse, soTangHouse);
-                listFacility.put(house, 0);
+                LIST_FACILITY.put(house, 0);
                 for (int i = 0; i < HOUSE_LIST.size() ; i++) {
                     if(HOUSE_LIST.get(i).equals(house)){
                         HOUSE_LIST.remove(i);
@@ -337,7 +337,7 @@ public class FacilityServiceImpl implements IFacilityService {
                 System.out.println("Nhập dịch vụ miễn phí đi kèm");
                 String dichVuFree = scanner.nextLine();
                 Room room = new Room(maDichVuRoom, tenDichVuRoom, dienTichRoom, giaThueRoom, sLToiDaRoom, kieuThueRoom, dichVuFree);
-                listFacility.put(room, 0);
+                LIST_FACILITY.put(room, 0);
                 for (int i = 0; i < ROOM_LIST.size() ; i++) {
                     if(ROOM_LIST.get(i).equals(room)){
                         ROOM_LIST.remove(i);
@@ -406,7 +406,7 @@ public class FacilityServiceImpl implements IFacilityService {
         ReadAndWrite.read("src\\case_study\\data\\villa.csv");
         ReadAndWrite.read("src\\case_study\\data\\house.csv");
         ReadAndWrite.read("src\\case_study\\data\\room.csv");
-        for (Map.Entry<Facility, Integer> entry : listFacility.entrySet()) {
+        for (Map.Entry<Facility, Integer> entry : LIST_FACILITY.entrySet()) {
             if (entry.getValue() >= 5) {
                 System.out.println(entry.getKey() + " --- " + entry.getValue());
             }

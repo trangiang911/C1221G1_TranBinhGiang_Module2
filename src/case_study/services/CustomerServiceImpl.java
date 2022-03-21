@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class CustomerServiceImpl implements ICustomerService {
     Scanner scanner = new Scanner(System.in);
-    private static final List<Customer> CUSTOMER_LIST = new LinkedList<>();
+     static final List<Customer> CUSTOMER_LIST = new LinkedList<>();
 
     static {
         List<String> stringList = ReadAndWrite.read("src\\case_study\\data\\customer.csv");

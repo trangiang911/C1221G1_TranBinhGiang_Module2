@@ -60,14 +60,16 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "idBooking='" + idBooking + '\'' +
+        return "Booking{" +
+                "idBooking='" + idBooking + '\'' +
                 ", beginDay='" + beginDay + '\'' +
                 ", endDay='" + endDay + '\'' +
                 ", customer=" + customer +
-                ", facility="+facility+ '\''+
+                ", facility=" + facility +
                 '}';
     }
+
     public String toCSV(){
-        return idBooking+","+beginDay+","+endDay+","+customer+","+facility;
+        return idBooking+","+beginDay+","+endDay+","+customer.getMaKhachHang()+","+facility.getMaDichVu();
     }
 }
