@@ -7,6 +7,7 @@ import luyen_tap_de_3.utils.NotFoundProductException;
 import luyen_tap_de_3.utils.ReadAndWriter;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -104,31 +105,31 @@ public class SanPhamService implements IService {
                 System.out.println("Nhập giá sản phẩm");
                 String str5 = scanner.nextLine();
                 while (!Pattern.matches("^[0-9]+$", str5)) {
-                System.out.println("Giá sản phẩm yêu cầu nhập số dương");
-                str5 = scanner.nextLine();
-            }
-            double priceXK = Double.parseDouble(str5);
-            System.out.println("Nhập số lượng sản phẩm");
-            String str6 = scanner.nextLine();
-            while (!Pattern.matches("^[0-9]+$", str6)) {
-                System.out.println("Số lương  yêu cầu nhập số dương");
-                str6 = scanner.nextLine();
-            }
-            int slXK = Integer.parseInt(str6);
-            System.out.println("Nhập nhà sản xuất");
-            String nsxXK = scanner.nextLine();
-            System.out.println("Nhập giá xuất khẩu");
-            String str7 = scanner.nextLine();
-            while (!Pattern.matches("^[0-9]+$",str7)){
-                System.out.println("Giá xuất khẩu phải là số dương");
-                str7=scanner.nextLine();
-            }
-            double priceXK1 = Double.parseDouble(str7);
-            System.out.println("Nhập quốc gia xuất khẩu");
-            String nation = scanner.nextLine();
-            XUAT_KHAU_LIST.add(new XuatKhau(maSPXK, nameXK, priceXK, slXK, nsxXK, priceXK1, nation));
-            ReadAndWriter.write("src\\luyen_tap_de_3\\data\\xuatKhau.csv", XUAT_KHAU_LIST, false);
-            break;
+                    System.out.println("Giá sản phẩm yêu cầu nhập số dương");
+                    str5 = scanner.nextLine();
+                }
+                double priceXK = Double.parseDouble(str5);
+                System.out.println("Nhập số lượng sản phẩm");
+                String str6 = scanner.nextLine();
+                while (!Pattern.matches("^[0-9]+$", str6)) {
+                    System.out.println("Số lương  yêu cầu nhập số dương");
+                    str6 = scanner.nextLine();
+                }
+                int slXK = Integer.parseInt(str6);
+                System.out.println("Nhập nhà sản xuất");
+                String nsxXK = scanner.nextLine();
+                System.out.println("Nhập giá xuất khẩu");
+                String str7 = scanner.nextLine();
+                while (!Pattern.matches("^[0-9]+$", str7)) {
+                    System.out.println("Giá xuất khẩu phải là số dương");
+                    str7 = scanner.nextLine();
+                }
+                double priceXK1 = Double.parseDouble(str7);
+                System.out.println("Nhập quốc gia xuất khẩu");
+                String nation = scanner.nextLine();
+                XUAT_KHAU_LIST.add(new XuatKhau(maSPXK, nameXK, priceXK, slXK, nsxXK, priceXK1, nation));
+                ReadAndWriter.write("src\\luyen_tap_de_3\\data\\xuatKhau.csv", XUAT_KHAU_LIST, false);
+                break;
             default:
                 System.out.println("Lựa chọn k đúng");
                 break;
@@ -142,32 +143,42 @@ public class SanPhamService implements IService {
         ReadAndWriter.read("src\\luyen_tap_de_3\\data\\xuatKhau.csv");
         for (int i = 0; i < NHAP_KHAU_LIST.size(); i++) {
             if (NHAP_KHAU_LIST.get(i).getMaSP().equals(maSPDel)) {
+                cont++;
                 System.out.println("bạn có chắc xoá sản phẩm (y/n)");
                 String choice = scanner.nextLine();
                 if ("y".equals(choice)) {
                     NHAP_KHAU_LIST.remove(i);
                     System.out.println("Xoá thành công");
-                    cont++;
                     break;
                 }
-            } else {
-                break;
             }
         }
         for (int i = 0; i < XUAT_KHAU_LIST.size(); i++) {
-            if (NHAP_KHAU_LIST.get(i).getMaSP().equals(maSPDel)) {
+            if (XUAT_KHAU_LIST.get(i).getMaSP().equals(maSPDel)) {
+                cont++;
                 System.out.println("Bạn có chắc muốn xoá sản phẩm này (y/n)");
                 String choice = scanner.nextLine();
                 if ("y".equals(choice)) {
                     XUAT_KHAU_LIST.remove(i);
                     System.out.println("xoá thành công");
-                    cont++;
                     break;
                 }
-            } else {
-                break;
             }
         }
+//        List<Integer> arr3 = new ArrayList<>();
+//        for (NhapKhau nhapKhau : NHAP_KHAU_LIST) {
+//            arr3.add(nhapKhau.getId());
+//        }
+//        for (XuatKhau xuatKhau : XUAT_KHAU_LIST) {
+//            arr3.add(xuatKhau.getId());
+//        }
+//        for (Integer num1 : arr3) {
+//            int max1 = arr3.get(0);
+//            if (max1 < num1) {
+//                max1 = num1;
+//                SanPham.setIdTemp(max1 + 1);
+//            }
+//        }
         ReadAndWriter.write("src\\luyen_tap_de_3\\data\\nhapKhau.csv", NHAP_KHAU_LIST, false);
         ReadAndWriter.write("src\\luyen_tap_de_3\\data\\xuatKhau.csv", XUAT_KHAU_LIST, false);
         if (cont == 0) {
