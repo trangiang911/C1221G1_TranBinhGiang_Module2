@@ -1,7 +1,7 @@
 package luyen_tap_de_4.models;
 
 public abstract class TaiKhoanNganHang {
-    private static int idTemp;
+    private static int idTemp=1;
     private int id;
     private String code;
     private String name;

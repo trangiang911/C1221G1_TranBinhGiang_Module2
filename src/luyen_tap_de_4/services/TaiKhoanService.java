@@ -8,6 +8,7 @@ import luyen_tap_de_4.utils.NotFoundBankAccountException;
 import luyen_tap_de_4.utils.ReadAndWriter;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -39,13 +40,15 @@ public class TaiKhoanService implements IService {
              array.add(Integer.parseInt(arr[0]));
             }
         }
+        int max = 0;
         for (Integer num : array) {
-            int max = array.get(0);
+            max = array.get(0);
             if (max < num) {
                 max = num;
-                SanPham.setIdTemp(max + 1);
             }
         }
+        TaiKhoanNganHang.setIdTemp(max + 1);
+
     }
     @Override
     public void creat() {
@@ -60,6 +63,10 @@ public class TaiKhoanService implements IService {
                 String date = checkDate("Ngày tạo tài khoản");
                 double saveMoney = checkDouble("số tiền tiết kiệm");
                 String dateSave = checkDate("ngày gửi tiết kiệm");
+                while (Date.parse(date)-Date.parse(dateSave)<0){
+                    System.out.println("Ngày gửi tiết kiệm phải lớn hơn ngày tạo tài khoản");
+                    dateSave=checkDate("lại ngày gửi tiết kiệm");
+                }
                 double rate = checkDouble("lãi suất");
                 int tenor = checkInt("kì hạn");
                 TaiKhoanTietKiem tietKiem = new TaiKhoanTietKiem(code, name, date, saveMoney, dateSave, rate, tenor);
@@ -181,4 +188,5 @@ public class TaiKhoanService implements IService {
         }while (true);
         return  Integer.parseInt(result);
     }
+    
 }
